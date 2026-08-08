@@ -4,106 +4,102 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NAV_LINKS, SITE_CONFIG } from "../../lib/constants";
+import BoyutLogo from "../ui/BoyutLogo";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [pathname]);
-
   return (
     <header className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
-      <div className={`container ${styles.inner}`}>
-        <Link href="/" className={styles.logo}>
-          <div className={styles.logoIcon}>
-            <span className={styles.logoB}>B</span>
-            <span className={styles.logoInfinity}>∞</span>
-          </div>
-          <div className={styles.logoText}>
-            <span className={styles.logoBoyut}>BOYUT</span>
-            <span className={styles.logoEgitim}>EĞİTİM</span>
-          </div>
-        </Link>
+      <div className="container">
+        <div className={styles.inner}>
+          {/* Official Boyut Logo */}
+          <Link href="/" className={styles.logoLink} onClick={() => setMobileOpen(false)}>
+            <BoyutLogo width={46} height={30} showText={true} />
+          </Link>
 
-        <nav className={styles.desktopNav}>
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`${styles.navLink} ${
-                pathname === link.href ? styles.active : ""
-              }`}
+          {/* Desktop Links */}
+          <nav className={styles.desktopNav}>
+            {NAV_LINKS.map((link) => {
+              const isActive = pathname === link.href;
+              const isMadlen = link.href === "/madlen";
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`${styles.navLink} ${isActive ? styles.active : ""}`}
+                >
+                  {link.label}
+                  {isMadlen && <span className={styles.aiTag}>AI</span>}
+                </Link>
+              );
+            })}
+          </nav>
+
+          {/* CTA Buttons */}
+          <div className={styles.ctaGroup}>
+            <a
+              href={SITE_CONFIG.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.whatsappBtn}
             >
-              {link.label}
-              {link.href === "/madlen" && (
-                <span className={styles.aiTag}>AI</span>
-              )}
-            </Link>
-          ))}
-        </nav>
+              <span>📱</span> WhatsApp Bilgi
+            </a>
 
-        <div className={styles.ctaGroup}>
-          <a
-            href={SITE_CONFIG.whatsapp}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.whatsappBtn}
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-            </svg>
-            WhatsApp
-          </a>
-
-          <button
-            className={`${styles.hamburger} ${menuOpen ? styles.open : ""}`}
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Menü"
-          >
-            <span />
-            <span />
-            <span />
-          </button>
+            {/* Hamburger button for mobile */}
+            <button
+              className={`${styles.hamburger} ${mobileOpen ? styles.open : ""}`}
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Menü"
+            >
+              <span />
+              <span />
+              <span />
+            </button>
+          </div>
         </div>
       </div>
 
-      <div className={`${styles.mobileMenu} ${menuOpen ? styles.mobileOpen : ""}`}>
-        <nav className={styles.mobileNav}>
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`${styles.mobileNavLink} ${
-                pathname === link.href ? styles.mobileActive : ""
-              }`}
-            >
-              {link.label}
-              {link.href === "/madlen" && (
-                <span className={styles.aiTagMobile}>AI</span>
-              )}
-            </Link>
-          ))}
+      {/* Mobile Drawer */}
+      <div className={`${styles.mobileMenu} ${mobileOpen ? styles.mobileOpen : ""}`}>
+        <div className={styles.mobileNav}>
+          {NAV_LINKS.map((link) => {
+            const isActive = pathname === link.href;
+            const isMadlen = link.href === "/madlen";
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`${styles.mobileNavLink} ${isActive ? styles.mobileActive : ""}`}
+                onClick={() => setMobileOpen(false)}
+              >
+                {link.label}
+                {isMadlen && <span className={styles.aiTagMobile}>AI</span>}
+              </Link>
+            );
+          })}
           <a
             href={SITE_CONFIG.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
             className={styles.mobileWhatsapp}
+            onClick={() => setMobileOpen(false)}
           >
-            📱 WhatsApp ile İletişim
+            💬 WhatsApp&apos;tan Hızlı Ulaşın
           </a>
-        </nav>
+        </div>
       </div>
     </header>
   );
