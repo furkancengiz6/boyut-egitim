@@ -1,13 +1,10 @@
+import Image from "next/image";
+import Link from "next/link";
 import Navbar from "../../components/layout/Navbar";
 import Footer from "../../components/layout/Footer";
 import WhatsAppButton from "../../components/ui/WhatsAppButton";
-import { SITE_CONFIG, MADLEN_FEATURES } from "../../lib/constants";
+import { MADLEN_FEATURES } from "../../lib/constants";
 import styles from "./madlen.module.css";
-
-export const metadata = {
-  title: "MADLEN AI Yapay Zeka Destekli Eğitim — Boyut Eğitim",
-  description: "Türkiye Yüzyılı Maarif Modeli Uyumlu Yapay Zeka Destekli MADLEN Eğitim Sistemi. Öğrencinin gelişimini analiz eden kişiselleştirilmiş öğrenme platformu.",
-};
 
 export default function MadlenPage() {
   return (
@@ -16,13 +13,25 @@ export default function MadlenPage() {
 
       <section className={styles.hero}>
         <div className="container">
-          <span className="section-tag">Yapay Zeka Teknolojisi</span>
+          <span className="section-tag">Öğrenmede BOYUT&apos;unuz Değişecek</span>
           <h1 className={styles.title}>
-            MADLEN <span className="gradient-text-orange">Eğitim Sistemi</span>
+            MADLEN <span className="gradient-text-orange">Yapay Zeka</span> Eğitim Altyapısı
           </h1>
           <p className={styles.subtitle}>
-            Öğrencinin gelişimini analiz eden, eksiklerini belirleyen ve öğrenme sürecini kişiselleştiren yeni nesil eğitim yaklaşımı.
+            Türkiye Yüzyılı Maarif Modeli ile tam uyumlu MADLEN AI, öğrencinin akademik gelişimini anlık izleyen ve eksiklerini milimetrik olarak tespit eden yapay zeka sistemidir.
           </p>
+
+          <div className={styles.mascotRow}>
+            <div className={styles.mascotWrapper}>
+              <Image
+                src="/assets/madlen-mascot.png"
+                alt="MADLEN AI Maskot"
+                width={140}
+                height={140}
+                className={styles.mascotImg}
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -31,60 +40,54 @@ export default function MadlenPage() {
           <div className={styles.grid}>
             {MADLEN_FEATURES.map((item, idx) => (
               <div key={idx} className={styles.card}>
-                <div className={styles.icon}>{item.icon}</div>
+                <div className={styles.cardIcon}>{item.icon}</div>
                 <h3 className={styles.cardTitle}>{item.title}</h3>
                 <p className={styles.cardDesc}>{item.description}</p>
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className={styles.detailBox}>
-            <h2>MADLEN Nasıl Çalışır?</h2>
-            <div className={styles.steps}>
-              <div className={styles.step}>
-                <div className={styles.stepNum}>1</div>
-                <div>
-                  <h4>Deneme Sınavı Verisi Toplanır</h4>
-                  <p>Girilen her denemenin soru bazlı sonuçları MADLEN yapay zeka sistemine aktarılır.</p>
-                </div>
-              </div>
+      <section className={styles.stepSection}>
+        <div className="container">
+          <div className={styles.stepHeader}>
+            <span className="section-tag">4 Adımda MADLEN İşleyişi</span>
+            <h2 className="section-title">
+              Sistem Nasıl <span className="gradient-text-blue">Çalışır?</span>
+            </h2>
+          </div>
 
-              <div className={styles.step}>
-                <div className={styles.stepNum}>2</div>
-                <div>
-                  <h4>Konu Bazlı Eksik Analizi Yapılır</h4>
-                  <p>Hangi alt başlıkta kaçırılan netler var? Zeka ve algoritma bunları tespit eder.</p>
-                </div>
-              </div>
-
-              <div className={styles.step}>
-                <div className={styles.stepNum}>3</div>
-                <div>
-                  <h4>Sana Özel Çalışma Planı Hazırlanır</h4>
-                  <p>Aynı konuları tekrar tekrar çalışmak yerine sadece eksik olduğun noktalara odaklanırsın.</p>
-                </div>
-              </div>
-
-              <div className={styles.step}>
-                <div className={styles.stepNum}>4</div>
-                <div>
-                  <h4>Veliye Şeffaf Gelişim Raporu Gönderilir</h4>
-                  <p>Ailen öğrencinin haftalık net artışını ve performansını anlık olarak izler.</p>
-                </div>
-              </div>
+          <div className={styles.stepGrid}>
+            <div className={styles.stepCard}>
+              <span className={styles.stepNum}>Adım 1</span>
+              <h3 className={styles.stepTitle}>Deneme Sınavı Girişi</h3>
+              <p className={styles.stepDesc}>Öğrenci 16+ yayınevinin katıldığı Türkiye geneli deneme sınavlarına girer.</p>
             </div>
 
-            <div className={styles.ctaBox}>
-              <h3>MADLEN AI Sistemini Deneyimlemeye Hazır mısın?</h3>
-              <a
-                href={SITE_CONFIG.whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-whatsapp"
-              >
-                📱 WhatsApp&apos;tan Bilgi & Demo İste
-              </a>
+            <div className={styles.stepCard}>
+              <span className={styles.stepNum}>Adım 2</span>
+              <h3 className={styles.stepTitle}>Optik & Yapay Zeka Analizi</h3>
+              <p className={styles.stepDesc}>Optik okuma anında sisteme aktarılır. MADLEN soru bazlı eksik haritası çıkarır.</p>
             </div>
+
+            <div className={styles.stepCard}>
+              <span className={styles.stepNum}>Adım 3</span>
+              <h3 className={styles.stepTitle}>Nokta Atışı Etüt & Ödev</h3>
+              <p className={styles.stepDesc}>Yapay zeka sadece yanlış yapılan alt başlıklar için kişiye özel soru föyü oluşturur.</p>
+            </div>
+
+            <div className={styles.stepCard}>
+              <span className={styles.stepNum}>Adım 4</span>
+              <h3 className={styles.stepTitle}>Veli Takip Raporu</h3>
+              <p className={styles.stepDesc}>Gelişim grafikleri ve net artışları veli bilgilendirme paneline gönderilir.</p>
+            </div>
+          </div>
+
+          <div style={{ textAlign: "center", marginTop: "40px" }}>
+            <Link href="/madlen-demo" className="btn-primary">
+              🧪 Canlı MADLEN AI Demo Testini Başlat →
+            </Link>
           </div>
         </div>
       </section>

@@ -1,225 +1,185 @@
 .hero {
   position: relative;
-  min-height: 100vh;
-  padding: 160px 0 100px;
+  min-height: 90vh;
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 140px 0 80px;
+  background: var(--gradient-hero);
   overflow: hidden;
-  background: radial-gradient(ellipse at 50% 20%, #0D1A35 0%, #070C18 70%);
+  border-bottom: 1px solid var(--glass-border);
 }
 
-.glowBlue {
+.glow1, .glow2 {
   position: absolute;
-  top: 10%;
-  left: 20%;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.glow1 {
+  top: -100px;
+  left: -100px;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(30, 143, 213, 0.18) 0%, transparent 70%);
-  pointer-events: none;
-  z-index: 1;
+  background: rgba(10, 79, 168, 0.1);
 }
 
-.glowOrange {
-  position: absolute;
-  bottom: 20%;
-  right: 15%;
-  width: 450px;
-  height: 450px;
-  background: radial-gradient(circle, rgba(245, 124, 0, 0.14) 0%, transparent 70%);
-  pointer-events: none;
-  z-index: 1;
+.glow2 {
+  bottom: -100px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: rgba(245, 124, 0, 0.08);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
 }
 
 .content {
-  position: relative;
-  z-index: 2;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
 }
 
-.tagWrapper {
+.badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 20px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 6px 16px;
+  background: rgba(10, 79, 168, 0.08);
+  border: 1px solid rgba(10, 79, 168, 0.2);
   border-radius: 50px;
-  margin-bottom: 24px;
-  backdrop-filter: blur(10px);
-}
-
-.tagIcon {
-  font-size: 1rem;
-}
-
-.tagText {
-  font-size: 0.88rem;
-  color: var(--text-secondary);
-  font-weight: 500;
-}
-
-.tagBadge {
-  background: linear-gradient(135deg, var(--boyut-orange), var(--boyut-gold));
-  color: white;
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  padding: 2px 10px;
-  border-radius: 20px;
-  letter-spacing: 0.04em;
+  color: var(--boyut-blue);
+  margin-bottom: 20px;
 }
 
 .title {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 24px;
-}
-
-.titleSub {
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
-  font-weight: 600;
-  color: var(--boyut-sky);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.titleMain {
-  font-size: clamp(2.5rem, 7vw, 5.2rem);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
   font-weight: 900;
-  line-height: 1.05;
-  color: white;
+  color: #0F172A;
+  line-height: 1.15;
+  margin-bottom: 20px;
   letter-spacing: -0.02em;
 }
 
-.highlightOrange {
-  background: linear-gradient(135deg, #FF6B00 0%, #FFB300 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.subtitle {
+  font-size: 1.1rem;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 32px;
+  max-width: 540px;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.features {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+.checkIcon {
+  color: #16A34A;
+}
+
+/* Tree Growth Card */
+.visualWrapper {
   position: relative;
 }
 
-.subtitle {
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  color: var(--text-secondary);
-  max-width: 780px;
-  line-height: 1.7;
-  margin-bottom: 40px;
-}
-
-.madlenText {
-  color: var(--text-primary);
-}
-
-.ctaGroup {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 64px;
-}
-
-/* Tree Section Graphic */
-.treeSection {
-  width: 100%;
-  max-width: 900px;
-  background: rgba(13, 21, 38, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 24px;
+.treeCard {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 28px;
   padding: 32px;
-  backdrop-filter: blur(16px);
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
 }
 
-.treeTitle {
-  font-size: 0.9rem;
-  font-weight: 800;
-  letter-spacing: 0.15em;
-  color: var(--boyut-sky);
+.treeHeader {
+  text-align: center;
   margin-bottom: 24px;
+}
+
+.treeHeader h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.treeHeader p {
+  font-size: 0.82rem;
+  color: #64748B;
 }
 
 .treeGrid {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-}
-
-.treeCard {
-  flex: 1;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 16px;
-  padding: 20px 12px;
-  display: flex;
   flex-direction: column;
+  gap: 14px;
+}
+
+.treeStage {
+  display: flex;
   align-items: center;
-  gap: 8px;
-  transition: all 0.3s ease;
-  position: relative;
+  gap: 16px;
+  padding: 16px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
 }
 
-.treeCardActive {
-  background: linear-gradient(135deg, rgba(30, 143, 213, 0.15) 0%, rgba(245, 124, 0, 0.15) 100%);
-  border-color: rgba(30, 143, 213, 0.4);
-  box-shadow: 0 8px 32px rgba(30, 143, 213, 0.2);
-  transform: scale(1.04);
+.stageIcon {
+  font-size: 2rem;
 }
 
-.badge {
-  position: absolute;
-  top: -12px;
-  background: linear-gradient(135deg, var(--boyut-orange), var(--boyut-gold));
-  color: white;
-  font-size: 0.65rem;
-  font-weight: 800;
-  padding: 2px 10px;
-  border-radius: 20px;
-  letter-spacing: 0.05em;
-}
-
-.treeVisual {
-  font-size: 2.5rem;
-  margin-bottom: 4px;
-}
-
-.treeLabel {
+.stageTitle {
   font-size: 0.95rem;
   font-weight: 800;
-  color: var(--text-primary);
+  color: #0F172A;
 }
 
-.treeSub {
-  font-size: 0.75rem;
-  color: var(--text-secondary);
+.stageDesc {
+  font-size: 0.78rem;
+  color: #64748B;
 }
 
-.plusIcon {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--boyut-sky);
-}
-
-@media (max-width: 768px) {
-  .hero {
-    padding: 120px 0 60px;
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
   }
 
-  .treeGrid {
-    flex-direction: column;
-    gap: 12px;
+  .content {
+    align-items: center;
+    text-align: center;
   }
 
-  .plusIcon {
-    transform: rotate(90deg);
+  .actions {
+    justify-content: center;
   }
 
-  .treeCardActive {
-    transform: none;
+  .features {
+    justify-content: center;
   }
 }

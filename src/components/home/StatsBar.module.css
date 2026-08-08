@@ -1,9 +1,7 @@
 .section {
   padding: 40px 0;
-  background: var(--bg-secondary);
-  border-y: 1px solid rgba(255, 255, 255, 0.06);
-  position: relative;
-  z-index: 5;
+  background: #F8FAFC;
+  border-bottom: 1px solid #E2E8F0;
 }
 
 .grid {
@@ -13,41 +11,30 @@
 }
 
 .card {
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: 16px;
-  padding: 24px 20px;
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 20px;
+  padding: 24px;
   text-align: center;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(30, 143, 213, 0.4);
-  box-shadow: 0 8px 30px rgba(30, 143, 213, 0.15);
-}
-
-.number {
+.value {
   font-size: clamp(2rem, 3.5vw, 2.8rem);
   font-weight: 900;
+  color: var(--boyut-blue);
   font-family: 'Outfit', sans-serif;
-  background: linear-gradient(135deg, #1E8FD5 0%, #F57C00 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1.1;
-  margin-bottom: 4px;
-}
-
-.suffix {
-  font-size: 0.75em;
+  line-height: 1;
 }
 
 .label {
   font-size: 0.88rem;
-  color: var(--text-secondary);
-  font-weight: 500;
+  font-weight: 700;
+  color: #475569;
 }
 
 @media (max-width: 900px) {

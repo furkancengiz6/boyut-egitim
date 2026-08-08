@@ -1,104 +1,76 @@
-.container {
+.wrapper {
   margin-top: 40px;
 }
 
-.header {
+.card {
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 24px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.info {
+  padding: 36px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
-  flex-wrap: wrap;
-  gap: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
 }
 
 .badge {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--boyut-sky);
-  background: rgba(30, 143, 213, 0.15);
-  border: 1px solid rgba(30, 143, 213, 0.3);
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--boyut-orange);
+  background: rgba(245, 124, 0, 0.1);
   padding: 4px 12px;
   border-radius: 20px;
-  display: inline-block;
-  margin-bottom: 6px;
+  border: 1px solid rgba(245, 124, 0, 0.2);
 }
 
 .title {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 800;
-  color: var(--text-primary);
+  color: #0F172A;
 }
 
-.mapCard {
-  background: rgba(13, 21, 38, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 24px;
-  padding: 24px;
-  backdrop-filter: blur(16px);
+.address {
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+.transportInfo {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
+  margin: 8px 0;
+  width: 100%;
 }
 
-.mapVisual {
+.tItem {
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 16px 20px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 16px;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: #334155;
+  background: #F8FAFC;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #E2E8F0;
 }
 
-.pulsePin {
-  position: relative;
-  width: 48px;
-  height: 48px;
-  background: linear-gradient(135deg, var(--boyut-orange), var(--boyut-gold));
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.pinIcon {
-  font-size: 1.4rem;
-}
-
-.ring {
-  position: absolute;
-  inset: -6px;
-  border-radius: 50%;
-  border: 2px solid var(--boyut-orange);
-  animation: pulse-ring 2s infinite;
-}
-
-.locationInfo h4 {
+.tIcon {
   font-size: 1.1rem;
-  font-weight: 800;
-  color: var(--text-primary);
 }
 
-.locationInfo p {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
+.mapContainer {
+  min-height: 280px;
 }
 
-.tramInfo {
-  font-size: 0.82rem;
-  color: var(--boyut-sky);
-  font-weight: 700;
-}
-
-@keyframes pulse-ring {
-  0% { transform: scale(0.9); opacity: 0.8; }
-  100% { transform: scale(1.4); opacity: 0; }
-}
-
-@media (max-width: 600px) {
-  .mapVisual {
-    flex-direction: column;
-    text-align: center;
+@media (max-width: 768px) {
+  .card {
+    grid-template-columns: 1fr;
   }
 }

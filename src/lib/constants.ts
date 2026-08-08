@@ -1,23 +1,73 @@
-// Site genelinde kullanılan sabit veriler
+// Site genelinde kullanılan sabit veriler — BOYUT EĞİTİM KURUMLARI (ANTALYA)
 
 export const SITE_CONFIG = {
-  name: "Boyut Eğitim",
+  name: "Boyut Eğitim Kurumları",
   tagline: "Kalabalıkta Kaybolma",
   slogan: "Öğrenmede BOYUT'unuz Değişecek... #ÇARE BOYUT",
   phone: "0506 027 27 41",
   whatsapp: "https://wa.me/905060272741",
   instagram: "https://instagram.com/boyutegitim_",
   facebook: "https://facebook.com/BoyutEgitimKurumlari",
-  address: "İsmet Paşa Tramvay Durağı Yanı",
-  city: "Gaziantep",
+  address: "Balbey İsmet Paşa Caddesi, 403. Sk. No:5/A, 07040 Muratpaşa",
+  city: "Antalya",
+  googleMapsUrl: "https://www.google.com/search?hl=tr-TR&gl=tr&q=BOYUT+E%C4%9E%C4%B0T%C4%B0M+KURUMLARI,+Balbey+%C4%B0SMET+PA%C5%9EA+CADDES%C4%B0,+403.+Sk.+No:5/A,+07040+Muratpa%C5%9Fa/Antalya&ludocid=14403383674553253646#lrd=0x14c390022a6dc791:0xc7e31923bd683f0e,1",
 };
 
 export const STATS = [
   { value: 1200, suffix: "+", label: "Başarılı Öğrenci" },
-  { value: 98, suffix: "%", label: "Memnuniyet Oranı" },
+  { value: 5.0, suffix: " ★", label: "Google Yorum Puanı" },
   { value: 15000, suffix: "+", label: "Deneme Sınavı" },
-  { value: 8, suffix: "+", label: "Yıllık Deneyim" },
+  { value: 16, suffix: "+", label: "Seçkin Yayınevi" },
 ];
+
+export const GOOGLE_REVIEWS = [
+  {
+    name: "Elif Yılmaz",
+    author: "Elif Yılmaz",
+    rating: 5,
+    relativeTime: "1 ay önce",
+    text: "Antalya'da kalabalık sınıflarda kaybolmak istemeyen her öğrenciye tavsiye ederim. Öğretmen kadrosu son derece ilgili, deneme kulübü yayınları harika!",
+    initials: "EY",
+    avatarBg: "#0A4FA8",
+    role: "YKS Derece Öğrencisi",
+    avatar: "👩‍🎓",
+  },
+  {
+    name: "Kaan Arslan",
+    author: "Kaan Arslan",
+    rating: 5,
+    relativeTime: "2 hafta önce",
+    text: "MADLEN yapay zeka sistemi sayesinde matematikte nerede hata yaptığımı anında görüyorum. Netlerim 15 net arttı. Teşekkürler Boyut Eğitim!",
+    initials: "KA",
+    avatarBg: "#F57C00",
+    role: "12. Sınıf Öğrencisi",
+    avatar: "👨‍🎓",
+  },
+  {
+    name: "Sibel Demir (Veli)",
+    author: "Sibel Demir (Veli)",
+    rating: 5,
+    relativeTime: "3 hafta önce",
+    text: "Oğlumun gelişimini düzenli veli raporları ile takip edebiliyorum. Lokasyonu İsmet Paşa tramvay durağının hemen yanında, ulaşım çok rahat.",
+    initials: "SD",
+    avatarBg: "#0284C7",
+    role: "Veli",
+    avatar: "👩",
+  },
+  {
+    name: "Burak Kaya",
+    author: "Burak Kaya",
+    rating: 5,
+    relativeTime: "1 ay önce",
+    text: "Deneme kulübü sınav takvimi mükemmel işliyor. Özdebir, Töder, 3D gibi tüm yayınların sınavlarına burada giriyoruz.",
+    initials: "BK",
+    avatarBg: "#16A34A",
+    role: "Mezun YKS Öğrencisi",
+    avatar: "👨‍🎓",
+  },
+];
+
+export const TESTIMONIALS = GOOGLE_REVIEWS;
 
 export const SERVICES = [
   {
@@ -25,7 +75,7 @@ export const SERVICES = [
     title: "MADLEN AI Sistemi",
     description:
       "Yapay zeka destekli kişisel analiz ile öğrencinin eksiklerini tespit eder, özel çalışma planı oluşturur.",
-    color: "#1E8FD5",
+    color: "#0284C7",
     href: "/madlen",
   },
   {
@@ -37,27 +87,27 @@ export const SERVICES = [
     href: "/deneme-kulubu",
   },
   {
-    icon: "📈",
-    title: "Gelişim Analizi",
+    icon: "📜",
+    title: "Bursluluk Sınavı",
     description:
-      "Her denemeden sonra detaylı performans raporu. Güçlü ve zayıf yönlerin net görünümü.",
-    color: "#FFB300",
-    href: "/kurslar",
+      "Başarı bursu kazanmak ve derece kadrosunda yer almak için bursluluk sınavımıza başvurun.",
+    color: "#16A34A",
+    href: "/bursluluk-sinavi",
+  },
+  {
+    icon: "✍️",
+    title: "Yazılı Hazırlık Çalışması",
+    description:
+      "Okul sınavları öncesi ders bazlı yoğunlaştırılmış yazılıya hazırlık etütleri.",
+    color: "#9333EA",
+    href: "/yazili-hazirlik",
   },
   {
     icon: "👨‍👩‍👧",
     title: "Veliye Düzenli Raporlar",
     description:
       "Aileniz öğrencinin gelişimini adım adım takip eder. Şeffaf ve güvenilir iletişim.",
-    color: "#34A853",
-    href: "/kurslar",
-  },
-  {
-    icon: "🎯",
-    title: "Kişiselleştirilmiş Plan",
-    description:
-      "Her öğrenciye özel haftalık çalışma programı. Zeka + Çaba + Disiplin formülü.",
-    color: "#EA4335",
+    color: "#2563EB",
     href: "/kurslar",
   },
   {
@@ -65,7 +115,7 @@ export const SERVICES = [
     title: "Kazananların Dünyası",
     description:
       "Türkiye'nin en iyileri arasına girmeye hazır ol. Hedefini koy, birlikte ulaşalım.",
-    color: "#9C27B0",
+    color: "#EA580C",
     href: "/hakkimizda",
   },
 ];
@@ -172,36 +222,14 @@ export const BLOG_POSTS = [
   }
 ];
 
-export const TESTIMONIALS = [
-  {
-    name: "Ayşe K.",
-    grade: "12. Sınıf — TYT/AYT",
-    text: "MADLEN sistemi sayesinde matematikte hangi konularda eksik olduğumu net gördüm. 3 ayda netleri 12 puanı arttı!",
-    score: "Hedef: Tıp Fakültesi",
-    avatar: "👩‍🎓",
-  },
-  {
-    name: "Mehmet A.",
-    grade: "11. Sınıf",
-    text: "Deneme Kulübü ile her hafta farklı yayınevleri çözüyorum. Adaptasyon gücüm inanılmaz gelişti.",
-    score: "Net Artışı: +18",
-    avatar: "👨‍🎓",
-  },
-  {
-    name: "Zeynep T.",
-    grade: "12. Sınıf — YKS",
-    text: "Kalabalık sınıflarda kaybolmak istemiyordum. Boyut'ta kişiye özel ilgi aldım, hedefime ulaştım.",
-    score: "Üniversite: Kazandı ✓",
-    avatar: "👩‍💻",
-  },
-];
-
 export const NAV_LINKS = [
   { href: "/", label: "Ana Sayfa" },
   { href: "/madlen", label: "MADLEN AI" },
+  { href: "/bursluluk-sinavi", label: "Bursluluk Sınavı" },
+  { href: "/yazili-hazirlik", label: "Yazılı Hazırlık" },
   { href: "/deneme-kulubu", label: "Deneme Kulübü" },
   { href: "/kurslar", label: "Kurslar" },
-  { href: "/blog", label: "Blog & Rehberlik" },
+  { href: "/blog", label: "Blog" },
   { href: "/hakkimizda", label: "Hakkımızda" },
   { href: "/iletisim", label: "İletişim" },
 ];

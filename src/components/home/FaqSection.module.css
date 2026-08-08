@@ -14,50 +14,44 @@
   gap: 16px;
 }
 
-.faqCard {
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
+.item {
+  background: white;
+  border: 1px solid #E2E8F0;
   border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease;
+}
+
+.item:hover {
+  border-color: #CBD5E1;
+}
+
+.question {
+  width: 100%;
   padding: 20px 24px;
-  cursor: pointer;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-}
-
-.faqCard:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(30, 143, 213, 0.3);
-}
-
-.faqOpen {
-  background: rgba(13, 21, 38, 0.8);
-  border-color: rgba(30, 143, 213, 0.5);
-  box-shadow: 0 8px 30px rgba(30, 143, 213, 0.15);
-}
-
-.faqQuestion {
+  background: none;
+  border: none;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-family: 'Outfit', sans-serif;
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--text-primary);
-  gap: 16px;
+  color: #0F172A;
+  text-align: left;
+  cursor: pointer;
 }
 
 .icon {
-  font-size: 1.4rem;
-  color: var(--boyut-sky);
-  font-weight: 800;
-  width: 24px;
-  text-align: center;
+  font-size: 1.2rem;
+  color: var(--boyut-blue);
 }
 
-.faqAnswer {
-  margin-top: 14px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+.answer {
+  padding: 0 24px 20px;
   font-size: 0.95rem;
-  color: var(--text-secondary);
+  color: #475569;
   line-height: 1.6;
 }
