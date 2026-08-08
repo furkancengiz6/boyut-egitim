@@ -1,15 +1,19 @@
 .hero {
   padding: 160px 0 60px;
-  background: radial-gradient(ellipse at center, #0D1A35 0%, #070C18 70%);
+  background: radial-gradient(ellipse at 60% 0%, rgba(30,111,255,0.15) 0%, transparent 60%),
+              radial-gradient(ellipse at 20% 100%, rgba(124,58,237,0.1) 0%, transparent 60%),
+              #05091A;
   text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 .title {
   font-size: clamp(2.2rem, 5vw, 4rem);
   font-weight: 900;
-  color: white;
+  color: var(--text-primary);
   margin-top: 12px;
   margin-bottom: 16px;
+  letter-spacing: -0.02em;
 }
 
 .subtitle {

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
+import { Home, Brain } from "lucide-react";
 import styles from "./notfound.module.css";
 
 export default function NotFound() {
@@ -19,10 +20,10 @@ export default function NotFound() {
           </p>
           <div className={styles.btnGroup}>
             <Link href="/" className="btn-primary">
-              🏠 Ana Sayfaya Dön
+              <Home size={18} /> Ana Sayfaya Dön
             </Link>
             <Link href="/madlen" className="btn-secondary">
-              🧠 MADLEN AI Sistemini Keşfet
+              <Brain size={18} /> MADLEN AI Sistemini Keşfet
             </Link>
           </div>
         </div>

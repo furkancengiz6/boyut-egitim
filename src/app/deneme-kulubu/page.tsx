@@ -3,6 +3,7 @@ import Footer from "../../components/layout/Footer";
 import WhatsAppButton from "../../components/ui/WhatsAppButton";
 import ExamSchedule from "../../components/home/ExamSchedule";
 import { PUBLISHERS, SITE_CONFIG } from "../../lib/constants";
+import { Target, BookOpen, FileText, Star, MessageCircle } from "lucide-react";
 import styles from "./deneme.module.css";
 
 export const metadata = {
@@ -31,19 +32,19 @@ export default function DenemeKulubuPage() {
         <div className="container">
           <div className={styles.grid}>
             <div className={styles.infoCard}>
-              <div className={styles.infoIcon}>🎯</div>
+              <div className={styles.infoIcon}><Target size={32} color="#0284C7" /></div>
               <h3>Kişiye Özel Analiz</h3>
               <p>Performansını net olarak gör, konu eksiklerini anında keşfet.</p>
             </div>
 
             <div className={styles.infoCard}>
-              <div className={styles.infoIcon}>📖</div>
+              <div className={styles.infoIcon}><BookOpen size={32} color="#F57C00" /></div>
               <h3>Sıfır Hata Kitapçıkları</h3>
               <p>Hatalarından ders çıkar, bir daha aynı hatayı yapma.</p>
             </div>
 
             <div className={styles.infoCard}>
-              <div className={styles.infoIcon}>📝</div>
+              <div className={styles.infoIcon}><FileText size={32} color="#16A34A" /></div>
               <h3>Kişiye Özel Soru Bankası</h3>
               <p>Sana özel sorularla eksiklerini tamamla, gücünü artır.</p>
             </div>
@@ -56,7 +57,7 @@ export default function DenemeKulubuPage() {
             <div className={styles.pubGrid}>
               {PUBLISHERS.map((pub, idx) => (
                 <div key={idx} className={styles.pubBadge}>
-                  ⭐ {pub}
+                  <Star size={16} color="#FFD700" style={{ marginRight: '4px' }} /> {pub}
                 </div>
               ))}
             </div>
@@ -71,7 +72,7 @@ export default function DenemeKulubuPage() {
               rel="noopener noreferrer"
               className="btn-whatsapp"
             >
-              📱 WhatsApp&apos;tan Kayıt Ol & Fiyat Al
+              <MessageCircle size={18} /> WhatsApp&apos;tan Kayıt Ol & Fiyat Al
             </a>
           </div>
         </div>

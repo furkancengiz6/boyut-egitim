@@ -1,21 +1,24 @@
 .hero {
-  padding: 140px 0 50px;
-  background: var(--gradient-hero);
+  padding: 140px 0 60px;
+  background: radial-gradient(ellipse at 60% 0%, rgba(124,58,237,0.15) 0%, transparent 60%),
+              radial-gradient(ellipse at 20% 100%, rgba(30,111,255,0.1) 0%, transparent 60%),
+              #05091A;
   text-align: center;
-  border-bottom: 1px solid var(--glass-border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .title {
   font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 800;
-  color: #0F172A;
+  font-weight: 900;
+  color: var(--text-primary);
   margin-top: 10px;
   margin-bottom: 14px;
+  letter-spacing: -0.02em;
 }
 
 .subtitle {
   font-size: 1.05rem;
-  color: #475569;
+  color: var(--text-secondary);
   max-width: 650px;
   margin: 0 auto;
   line-height: 1.6;
@@ -29,11 +32,23 @@
 }
 
 .formCard {
-  background: white;
-  border: 1px solid #E2E8F0;
-  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
   padding: 36px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.formCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(124, 58, 237, 0.6), transparent);
 }
 
 .form {
@@ -45,37 +60,45 @@
 .form h3 {
   font-size: 1.3rem;
   font-weight: 800;
-  color: #0F172A;
-  margin-bottom: 8px;
+  color: var(--text-primary);
+  margin-bottom: 6px;
 }
 
 .inputGroup {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 7px;
 }
 
 .inputGroup label {
   font-size: 0.85rem;
   font-weight: 700;
-  color: #334155;
+  color: #94A3B8;
 }
 
 .inputGroup input,
 .inputGroup select {
-  padding: 12px 14px;
-  border: 1px solid #CBD5E1;
-  border-radius: 10px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
   font-size: 0.95rem;
   font-family: 'Outfit', sans-serif;
-  color: #0F172A;
+  color: var(--text-primary);
   outline: none;
+  transition: border-color 0.2s ease;
 }
 
 .inputGroup input:focus,
 .inputGroup select:focus {
-  border-color: var(--boyut-blue);
-  box-shadow: 0 0 0 3px rgba(10, 79, 168, 0.1);
+  border-color: rgba(30, 111, 255, 0.5);
+  box-shadow: 0 0 0 3px rgba(30, 111, 255, 0.1);
+  background: rgba(30, 111, 255, 0.05);
+}
+
+.inputGroup select option {
+  background: #080D24;
+  color: var(--text-primary);
 }
 
 .infoSide {
@@ -87,23 +110,30 @@
 .infoSide h2 {
   font-size: 1.5rem;
   font-weight: 800;
-  color: #0F172A;
+  color: var(--text-primary);
 }
 
 .infoList {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 16px;
 }
 
 .infoItem {
   display: flex;
   align-items: flex-start;
   gap: 16px;
-  background: #F8FAFC;
-  border: 1px solid #E2E8F0;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
   padding: 20px;
-  border-radius: 16px;
+  border-radius: 18px;
+  transition: all 0.3s ease;
+}
+
+.infoItem:hover {
+  background: rgba(124, 58, 237, 0.07);
+  border-color: rgba(124, 58, 237, 0.2);
+  transform: translateX(4px);
 }
 
 .infoItem span {
@@ -111,15 +141,15 @@
 }
 
 .infoItem h4 {
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 700;
-  color: #0F172A;
+  color: var(--text-primary);
   margin-bottom: 4px;
 }
 
 .infoItem p {
   font-size: 0.88rem;
-  color: #475569;
+  color: var(--text-secondary);
   line-height: 1.5;
 }
 

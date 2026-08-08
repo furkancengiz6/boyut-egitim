@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { MADLEN_FEATURES } from "../../lib/constants";
+import { Brain, Lightbulb, FlaskConical } from "lucide-react";
 import styles from "./MadlenShowcase.module.css";
 
 export default function MadlenShowcase() {
@@ -66,7 +67,7 @@ export default function MadlenShowcase() {
             <div className={styles.mockupBody}>
               {/* Profile Bar */}
               <div className={styles.profileBar}>
-                <div className={styles.avatar}>🧠</div>
+                <div className={styles.avatar}><Brain size={18} color="white" /></div>
                 <div>
                   <div className={styles.profileName}>Öğrenci: Can DEMİRBAŞ</div>
                   <div className={styles.profileMeta}>12. Sınıf — Sayısal | Hedef: 480+ Puan</div>
@@ -128,7 +129,7 @@ export default function MadlenShowcase() {
 
               {/* AI Recommendation Alert */}
               <div className={styles.aiAlert}>
-                <span className={styles.alertIcon}>💡</span>
+                <span className={styles.alertIcon}><Lightbulb size={20} color="#FFD700" /></span>
                 <div>
                   <strong>MADLEN AI Akıllı Öneri:</strong> &ldquo;Fizik — Elektrik ve Manyetizma konusundan 40 özel soru çözümü öneriliyor.&rdquo;
                 </div>
@@ -139,7 +140,7 @@ export default function MadlenShowcase() {
 
         <div className={styles.ctaWrapper}>
           <Link href="/madlen-demo" className="btn-primary">
-            🧪 Canlı MADLEN AI Demo Testini Başlat →
+            <FlaskConical size={18} /> Canlı MADLEN AI Demo Testini Başlat →
           </Link>
         </div>
       </div>

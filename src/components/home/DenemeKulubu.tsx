@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { ClipboardList, Check, MessageCircle } from "lucide-react";
 import { PUBLISHERS } from "../../lib/constants";
 import styles from "./DenemeKulubu.module.css";
 
@@ -22,7 +23,7 @@ export default function DenemeKulubu() {
         <div className={styles.publisherGrid}>
           {PUBLISHERS.map((pub, idx) => (
             <div key={idx} className={styles.pubCard}>
-              <span className={styles.checkBadge}>✓</span>
+              <span className={styles.checkBadge}><Check size={14} /></span>
               <span className={styles.pubName}>{pub}</span>
             </div>
           ))}
@@ -35,7 +36,7 @@ export default function DenemeKulubu() {
           </div>
           <div className={styles.btnGroup}>
             <Link href="/deneme-kulubu" className="btn-primary">
-              📋 Deneme Kulübü Sınav Takvimi →
+              <ClipboardList size={18} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '6px' }} /> Deneme Kulübü Sınav Takvimi →
             </Link>
             <a
               href="https://wa.me/905060272741?text=Merhaba%20Boyut%20E%C4%9Fitim%2C%20Deneme%20Kul%C3%BCb%C3%BC%20ve%20yayn%20takvimi%20hakknda%20bilgi%20almak%20istiyorum."

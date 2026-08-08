@@ -4,6 +4,7 @@ import { useState } from "react";
 import Navbar from "../../components/layout/Navbar";
 import Footer from "../../components/layout/Footer";
 import WhatsAppButton from "../../components/ui/WhatsAppButton";
+import { MessageCircle, CheckCircle2, FileText, Target, Users } from "lucide-react";
 import styles from "./yazili.module.css";
 
 export default function YaziliHazirlikPage() {
@@ -92,12 +93,12 @@ export default function YaziliHazirlikPage() {
                   </div>
 
                   <button type="submit" className="btn-whatsapp" style={{ justifyContent: "center" }}>
-                    📱 WhatsApp İle Ön Kayıt Yap
+                    <MessageCircle size={18} /> WhatsApp İle Ön Kayıt Yap
                   </button>
                 </form>
               ) : (
                 <div className={styles.successBox}>
-                  <div className={styles.successIcon}>✍️</div>
+                  <div className={styles.successIcon}><CheckCircle2 size={48} color="#34A853" /></div>
                   <h3>Talebiniz Alındı!</h3>
                   <p>Yazılı hazırlık etüt programımız için sizinle WhatsApp üzerinden iletişime geçeceğiz.</p>
                 </div>
@@ -108,7 +109,7 @@ export default function YaziliHazirlikPage() {
               <h2>Yazılı Çalışmaları Neleri Kapsar?</h2>
               <div className={styles.infoList}>
                 <div className={styles.infoItem}>
-                  <span>📝</span>
+                  <span className={styles.infoIcon}><FileText size={24} color="#0284C7" /></span>
                   <div>
                     <h4>Örnek Yazılı Soru Çözümleri</h4>
                     <p>MEB müfredatı ve okul sınav tarzına %100 uyumlu yazılı simülasyon soruları.</p>
@@ -116,7 +117,7 @@ export default function YaziliHazirlikPage() {
                 </div>
 
                 <div className={styles.infoItem}>
-                  <span>🎯</span>
+                  <span className={styles.infoIcon}><Target size={24} color="#F57C00" /></span>
                   <div>
                     <h4>Nokta Atışı Konu Özetleri</h4>
                     <p>Zaman kaybettirmeyen, sınavda çıkması muhtemel kritik özet föyleri.</p>
@@ -124,7 +125,7 @@ export default function YaziliHazirlikPage() {
                 </div>
 
                 <div className={styles.infoItem}>
-                  <span>👨‍🏫</span>
+                  <span className={styles.infoIcon}><Users size={24} color="#16A34A" /></span>
                   <div>
                     <h4>Birebir ve Küçük Gruplarda Etüt</h4>
                     <p>Kalabalıkta kaybolmadan sorularınızı birebir sorma ve anlama imkanı.</p>

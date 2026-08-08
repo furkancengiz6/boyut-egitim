@@ -1,43 +1,61 @@
 .marqueeWrapper {
   width: 100%;
   overflow: hidden;
-  background: linear-gradient(90deg, #0A4FA8 0%, #F57C00 100%);
-  padding: 12px 0;
+  background: linear-gradient(90deg, #1E6FFF 0%, #7C3AED 50%, #FF6B35 100%);
+  padding: 13px 0;
   white-space: nowrap;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 40px rgba(30, 111, 255, 0.3);
   position: relative;
   z-index: 10;
+}
+
+/* Edge fade masks */
+.marqueeWrapper::before,
+.marqueeWrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marqueeWrapper::before {
+  left: 0;
+  background: linear-gradient(90deg, #1E6FFF, transparent);
+}
+
+.marqueeWrapper::after {
+  right: 0;
+  background: linear-gradient(-90deg, #FF6B35, transparent);
 }
 
 .marqueeTrack {
   display: inline-flex;
   align-items: center;
   gap: 32px;
-  animation: marquee-scroll 25s linear infinite;
+  animation: marquee-scroll 28s linear infinite;
 }
 
 .marqueeItem {
   display: inline-flex;
   align-items: center;
   gap: 16px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 800;
-  color: white;
-  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   font-family: 'Outfit', sans-serif;
 }
 
 .dot {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.5rem;
 }
 
 @keyframes marquee-scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }

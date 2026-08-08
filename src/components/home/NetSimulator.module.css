@@ -7,28 +7,45 @@
 }
 
 .simBox {
-  background: white;
-  border: 1px solid #E2E8F0;
-  border-radius: 24px;
-  padding: 40px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  padding: 44px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.simBox::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(30, 111, 255, 0.6), rgba(124, 58, 237, 0.6), transparent);
 }
 
 .controlsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-  margin-bottom: 40px;
+  gap: 24px;
+  margin-bottom: 36px;
 }
 
 .ctrlCard {
-  background: #F8FAFC;
-  border: 1px solid #E2E8F0;
-  border-radius: 16px;
-  padding: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 22px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.ctrlCard:hover {
+  border-color: rgba(30, 111, 255, 0.3);
 }
 
 .ctrlHeader {
@@ -38,26 +55,30 @@
 }
 
 .ctrlTitle {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 800;
-  color: #0F172A;
+  color: #F0F6FF;
 }
 
 .ctrlVal {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 900;
-  color: var(--boyut-blue);
+  background: linear-gradient(135deg, #1E6FFF, #7C3AED);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .slider {
   width: 100%;
-  accent-color: var(--boyut-blue);
+  accent-color: #1E6FFF;
+  cursor: pointer;
 }
 
 .resultCard {
-  background: linear-gradient(135deg, rgba(10, 79, 168, 0.06), rgba(245, 124, 0, 0.06));
-  border: 1px solid rgba(10, 79, 168, 0.2);
-  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(30, 111, 255, 0.1) 0%, rgba(124, 58, 237, 0.08) 100%);
+  border: 1px solid rgba(30, 111, 255, 0.25);
+  border-radius: 22px;
   padding: 32px;
   display: flex;
   align-items: center;
@@ -66,26 +87,38 @@
 }
 
 .resLeft h4 {
-  font-size: 0.85rem;
-  color: #475569;
+  font-size: 0.8rem;
+  color: #64748B;
   text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 6px;
 }
 
 .resScore {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
   font-weight: 900;
-  color: var(--boyut-blue);
+  background: linear-gradient(135deg, #F0F6FF, #60A5FA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   line-height: 1;
-  margin: 6px 0;
+  margin: 4px 0;
 }
 
 .resTier {
   font-size: 1.05rem;
   font-weight: 800;
-  color: var(--boyut-orange);
+  background: linear-gradient(135deg, #FF6B35, #F59E0B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 @media (max-width: 900px) {
+  .simBox {
+    padding: 28px 20px;
+  }
+
   .controlsGrid {
     grid-template-columns: 1fr;
   }

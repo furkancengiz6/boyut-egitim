@@ -5,6 +5,7 @@ import Navbar from "../../components/layout/Navbar";
 import Footer from "../../components/layout/Footer";
 import WhatsAppButton from "../../components/ui/WhatsAppButton";
 import { SITE_CONFIG } from "../../lib/constants";
+import { Brain, Bot, Lightbulb } from "lucide-react";
 import styles from "./demo.module.css";
 
 const SAMPLE_QUESTIONS = [
@@ -42,6 +43,10 @@ export default function MadlenDemoPage() {
 
   const handleSelect = (qId: number, option: string) => {
     setAnswers({ ...answers, [qId]: option });
+  };
+
+  const handleAnalyze = () => {
+    setSubmitted(true);
   };
 
   const calculateScore = () => {
@@ -100,10 +105,10 @@ export default function MadlenDemoPage() {
               <div className={styles.submitArea}>
                 <button
                   disabled={Object.keys(answers).length < 3}
-                  className="btn-primary"
-                  onClick={() => setSubmitted(true)}
+                  className={styles.analyzeBtn}
+                  onClick={handleAnalyze}
                 >
-                  🧠 MADLEN AI Analizini Başlat →
+                  <Brain size={18} /> MADLEN AI Analizini Başlat →
                 </button>
                 {Object.keys(answers).length < 3 && (
                   <p className={styles.alertText}>* Lütfen devam etmek için tüm soruları yanıtlayın.</p>
@@ -112,9 +117,9 @@ export default function MadlenDemoPage() {
             </div>
           ) : (
             <div className={styles.reportBox}>
-              <div className={styles.reportHeader}>
-                <div className={styles.aiBadge}>🤖 MADLEN AI Analiz Raporu</div>
-                <h2>Performans & Eksik Analizi</h2>
+              <div className={styles.resultBox}>
+                <div className={styles.aiBadge}><Bot size={18} /> MADLEN AI Analiz Raporu</div>
+                <h2>Sonuçlar Hazır!</h2>
               </div>
 
               <div className={styles.scoreRow}>
@@ -128,8 +133,8 @@ export default function MadlenDemoPage() {
                 </div>
               </div>
 
-              <div className={styles.aiRecommendation}>
-                <h3>💡 MADLEN Yapay Zeka Tavsiyesi:</h3>
+              <div className={styles.recommendationBox}>
+                <h3><Lightbulb size={24} color="#FFD700" style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }} /> MADLEN Yapay Zeka Tavsiyesi:</h3>
                 {correctNum === 3 ? (
                   <p>
                     Harika bir temel! Temel kavramlara hakimsin. Boyut Eğitim Deneme Kulübü ile Türkiye geneli sınavlara girerek Türkiye derecesi hedefleyebilirsin.

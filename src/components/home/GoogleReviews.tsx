@@ -1,5 +1,6 @@
 "use client";
 
+import { Star } from "lucide-react";
 import { GOOGLE_REVIEWS, SITE_CONFIG } from "../../lib/constants";
 import styles from "./GoogleReviews.module.css";
 
@@ -52,7 +53,11 @@ export default function GoogleReviews() {
                   <h3 className={styles.author}>{rev.author}</h3>
                   <span className={styles.time}>{rev.relativeTime}</span>
                 </div>
-                <div className={styles.stars}>★★★★★</div>
+                <div className={styles.stars}>
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} size={14} fill="#F57C00" color="#F57C00" />
+                  ))}
+                </div>
               </div>
               <p className={styles.text}>&ldquo;{rev.text}&rdquo;</p>
               <div className={styles.verified}>
@@ -69,7 +74,7 @@ export default function GoogleReviews() {
             rel="noopener noreferrer"
             className="btn-secondary"
           >
-            ⭐ Google&apos;da Tüm Yorumları İncele & Yorum Yap →
+            <Star size={18} fill="currentColor" /> Google&apos;da Tüm Yorumları İncele & Yorum Yap →
           </a>
         </div>
       </div>

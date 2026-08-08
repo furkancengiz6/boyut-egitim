@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { Brain, FlaskConical } from "lucide-react";
 import styles from "./MadlenBanner.module.css";
 
 export default function MadlenBanner() {
@@ -20,7 +21,7 @@ export default function MadlenBanner() {
           </div>
 
           <div className={styles.content}>
-            <span className={styles.tag}>🧠 Yapay Zeka Destekli Eğitim</span>
+            <span className={styles.tag}><Brain size={16} /> Yapay Zeka Destekli Eğitim</span>
             <h2 className={styles.title}>
               MADLEN AI İle Eksiklerini <span className="gradient-text-orange">Nokta Atışı</span> Tespit Et!
             </h2>
@@ -30,10 +31,10 @@ export default function MadlenBanner() {
 
             <div className={styles.btnRow}>
               <Link href="/madlen" className="btn-primary">
-                🧠 MADLEN AI Sistemini İncele →
+                <Brain size={18} /> MADLEN AI Sistemini İncele →
               </Link>
               <Link href="/madlen-demo" className="btn-secondary">
-                🧪 3 Soruda Demo Testi Yap
+                <FlaskConical size={18} /> 3 Soruda Demo Testi Yap
               </Link>
             </div>
           </div>

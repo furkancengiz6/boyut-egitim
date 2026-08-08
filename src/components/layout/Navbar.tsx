@@ -3,8 +3,10 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Menu, X, MessageCircle } from "lucide-react";
 import { NAV_LINKS, SITE_CONFIG } from "../../lib/constants";
 import BoyutLogo from "../ui/BoyutLogo";
+import InfinityIcon from "../ui/InfinityIcon";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
@@ -55,7 +57,8 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className={styles.whatsappBtn}
             >
-              <span>📱</span> WhatsApp Bilgi
+              <InfinityIcon width={20} height={14} />
+              WhatsApp Bilgi
             </a>
 
             {/* Hamburger button for mobile */}
@@ -97,7 +100,7 @@ export default function Navbar() {
             className={styles.mobileWhatsapp}
             onClick={() => setMobileOpen(false)}
           >
-            💬 WhatsApp&apos;tan Hızlı Ulaşın
+            <MessageCircle size={18} style={{ marginRight: '8px' }} /> WhatsApp&apos;tan Hızlı Ulaşın
           </a>
         </div>
       </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { MessageCircle, Sparkles } from "lucide-react";
 import styles from "./PathFinderModal.module.css";
 
 interface PathFinderModalProps {
@@ -100,7 +101,7 @@ export default function PathFinderModal({ isOpen, onClose }: PathFinderModalProp
                 ← Geri
               </button>
               <button className="btn-whatsapp" onClick={handleFinish}>
-                📱 WhatsApp&apos;tan Özel Planımı Getir 🎉
+                <MessageCircle size={18} /> WhatsApp&apos;tan Özel Planımı Getir <Sparkles size={18} />
               </button>
             </div>
           </div>

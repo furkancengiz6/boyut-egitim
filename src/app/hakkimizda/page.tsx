@@ -2,6 +2,7 @@ import Navbar from "../../components/layout/Navbar";
 import Footer from "../../components/layout/Footer";
 import WhatsAppButton from "../../components/ui/WhatsAppButton";
 import { SITE_CONFIG } from "../../lib/constants";
+import { Target, Rocket, Lightbulb, MessageCircle } from "lucide-react";
 import styles from "./hakkimizda.module.css";
 
 export const metadata = {
@@ -41,19 +42,19 @@ export default function HakkimizdaPage() {
 
             <div className={styles.valuesGrid}>
               <div className={styles.valueCard}>
-                <div className={styles.valueIcon}>🎯</div>
+                <div className={styles.valueIcon}><Target size={32} color="#F57C00" /></div>
                 <h3>Misyonumuz</h3>
                 <p>Her öğrenciye kişiselleştirilmiş öğrenme haritası sunarak sınav başarısını maksimuma çıkarmak.</p>
               </div>
 
               <div className={styles.valueCard}>
-                <div className={styles.valueIcon}>🚀</div>
+                <div className={styles.valueIcon}><Rocket size={32} color="#1E6FFF" /></div>
                 <h3>Vizyonumuz</h3>
                 <p>Türkiye&apos;nin yapay zeka destekli en yenilikçi ve en başarılı eğitim kurumu olmak.</p>
               </div>
 
               <div className={styles.valueCard}>
-                <div className={styles.valueIcon}>💡</div>
+                <div className={styles.valueIcon}><Lightbulb size={32} color="#FFD700" /></div>
                 <h3>Değerlerimiz</h3>
                 <p>Şeffaflık, sürekli gelişim, kişisel ilgi ve Türkiye Yüzyılı Maarif Modeli uyumu.</p>
               </div>
@@ -64,7 +65,7 @@ export default function HakkimizdaPage() {
             <h3>Siz de Boyut Eğitim Ailesine Katılın</h3>
             <p>Lokasyon: {SITE_CONFIG.address}</p>
             <a href={SITE_CONFIG.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
-              📱 WhatsApp&apos;tan Bize Ulaşın
+              <MessageCircle size={18} /> WhatsApp&apos;tan Bize Ulaşın
             </a>
           </div>
         </div>

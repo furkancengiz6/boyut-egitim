@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { GraduationCap, FileSignature, CalendarDays } from "lucide-react";
 import styles from "./BurslulukBanner.module.css";
 
 export default function BurslulukBanner() {
@@ -9,7 +10,7 @@ export default function BurslulukBanner() {
       <div className="container">
         <div className={styles.card}>
           <div className={styles.content}>
-            <span className={styles.badge}>🎓 Başarı Bursu Fırsatı</span>
+            <span className={styles.badge}><GraduationCap size={16} /> Başarı Bursu Fırsatı</span>
             <h2 className={styles.title}>
               Boyut Eğitim <span className="gradient-text-orange">Bursluluk Sınavı</span> Başvuruları Başladı!
             </h2>
@@ -18,9 +19,9 @@ export default function BurslulukBanner() {
             </p>
             <div className={styles.ctaRow}>
               <Link href="/bursluluk-sinavi" className="btn-primary">
-                📝 Bursluluk Sınavına Başvur →
+                <FileSignature size={18} /> Bursluluk Sınavına Başvur →
               </Link>
-              <span className={styles.dateMeta}>🗓 Sınav Tarihi: Yakında Açıklanacak</span>
+              <span className={styles.dateMeta}><CalendarDays size={18} /> Sınav Tarihi: Yakında Açıklanacak</span>
             </div>
           </div>
         </div>

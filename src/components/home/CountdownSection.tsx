@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { Hourglass, Rocket } from "lucide-react";
 import PathFinderModal from "../ui/PathFinderModal";
 import styles from "./CountdownSection.module.css";
 
@@ -41,7 +42,7 @@ export default function CountdownSection() {
       <div className="container">
         <div className={styles.bannerCard}>
           <div className={styles.textSide}>
-            <span className={styles.badge}>⏳ Zaman Hızla Akıyor</span>
+            <span className={styles.badge}><Hourglass size={16} /> Zaman Hızla Akıyor</span>
             <h2 className={styles.title}>
               YKS Marotonuna <span className="gradient-text-orange">Geç Kalma!</span>
             </h2>
@@ -54,7 +55,7 @@ export default function CountdownSection() {
               className="btn-primary"
               style={{ marginTop: "16px" }}
             >
-              🚀 30 Saniyede Özel Rotanı Keşfet →
+              <Rocket size={18} /> 30 Saniyede Özel Rotanı Keşfet →
             </button>
           </div>
 

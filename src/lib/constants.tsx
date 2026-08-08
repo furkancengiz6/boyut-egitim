@@ -1,4 +1,5 @@
 // Site genelinde kullanılan sabit veriler — BOYUT EĞİTİM KURUMLARI (ANTALYA)
+import { Brain, ClipboardList, ScrollText, PenTool, Users, Trophy, Bot, BarChart, BookOpen, Lightbulb, Clock } from "lucide-react";
 
 export const SITE_CONFIG = {
   name: "Boyut Eğitim Kurumları",
@@ -71,7 +72,7 @@ export const TESTIMONIALS = GOOGLE_REVIEWS;
 
 export const SERVICES = [
   {
-    icon: "🧠",
+    icon: <Brain size={32} color="#0284C7" />,
     title: "MADLEN AI Sistemi",
     description:
       "Yapay zeka destekli kişisel analiz ile öğrencinin eksiklerini tespit eder, özel çalışma planı oluşturur.",
@@ -79,7 +80,7 @@ export const SERVICES = [
     href: "/madlen",
   },
   {
-    icon: "📋",
+    icon: <ClipboardList size={32} color="#F57C00" />,
     title: "Deneme Kulübü",
     description:
       "16+ yayınevinin en güncel denemeleri, sıfır hata kitapçıkları ve kişiye özel soru bankası.",
@@ -87,7 +88,7 @@ export const SERVICES = [
     href: "/deneme-kulubu",
   },
   {
-    icon: "📜",
+    icon: <ScrollText size={32} color="#16A34A" />,
     title: "Bursluluk Sınavı",
     description:
       "Başarı bursu kazanmak ve derece kadrosunda yer almak için bursluluk sınavımıza başvurun.",
@@ -95,7 +96,7 @@ export const SERVICES = [
     href: "/bursluluk-sinavi",
   },
   {
-    icon: "✍️",
+    icon: <PenTool size={32} color="#9333EA" />,
     title: "Yazılı Hazırlık Çalışması",
     description:
       "Okul sınavları öncesi ders bazlı yoğunlaştırılmış yazılıya hazırlık etütleri.",
@@ -103,7 +104,7 @@ export const SERVICES = [
     href: "/yazili-hazirlik",
   },
   {
-    icon: "👨‍👩‍👧",
+    icon: <Users size={32} color="#2563EB" />,
     title: "Veliye Düzenli Raporlar",
     description:
       "Aileniz öğrencinin gelişimini adım adım takip eder. Şeffaf ve güvenilir iletişim.",
@@ -111,7 +112,7 @@ export const SERVICES = [
     href: "/kurslar",
   },
   {
-    icon: "🏆",
+    icon: <Trophy size={32} color="#EA580C" />,
     title: "Kazananların Dünyası",
     description:
       "Türkiye'nin en iyileri arasına girmeye hazır ol. Hedefini koy, birlikte ulaşalım.",
@@ -122,25 +123,25 @@ export const SERVICES = [
 
 export const MADLEN_FEATURES = [
   {
-    icon: "🤖",
+    icon: <Bot size={28} color="#FF6B35" />,
     title: "Yapay Zeka Analizi",
     description:
       "MADLEN sistemi her denemeni analiz ederek gerçek eksik noktalarını tespit eder.",
   },
   {
-    icon: "📊",
+    icon: <BarChart size={28} color="#1E6FFF" />,
     title: "Kişisel Gelişim Takibi",
     description:
       "Akademik gelişimin grafiklerle izlenir, veli raporları düzenli paylaşılır.",
   },
   {
-    icon: "📚",
+    icon: <BookOpen size={28} color="#16A34A" />,
     title: "Maarif Modeli Uyumlu",
     description:
       "Türkiye Yüzyılı Maarif Modeli'ne tam uyumlu içerik ve müfredat takibi.",
   },
   {
-    icon: "💡",
+    icon: <Lightbulb size={28} color="#FFD700" />,
     title: "Akıllı Öneriler",
     description:
       "Zayıf konular için akıllı kaynak ve tekrar önerileri sunulur.",
@@ -174,7 +175,7 @@ export const BLOG_POSTS = [
     date: "05 Ağustos 2026",
     category: "Sınav Taktikleri",
     readTime: "4 dk okuma",
-    image: "📊",
+    image: <BarChart size={48} color="#1E6FFF" />,
     content: `
       YKS sınav hazırlığı maratonunda sadece ders çalışmak yeterli değildir. Doğru yöntemi bulmak, net artışının anahtarıdır.
 
@@ -201,7 +202,7 @@ export const BLOG_POSTS = [
     date: "01 Ağustos 2026",
     category: "Yapay Zeka & Eğitim",
     readTime: "5 dk okuma",
-    image: "🧠",
+    image: <Brain size={48} color="#0284C7" />,
     content: `
       Geleneksel eğitimde tüm sınıfa aynı ödevler verilir. Oysa her öğrencinin eksiği farklıdır.
 
@@ -215,7 +216,7 @@ export const BLOG_POSTS = [
     date: "24 Temmuz 2026",
     category: "Rehberlik",
     readTime: "3 dk okuma",
-    image: "⏱️",
+    image: <Clock size={48} color="#F57C00" />,
     content: `
       Sınavda zamanı verimli kullanmak en az bilgi kadar önemlidir. Turlama tekniği ile zor sorulara takılmadan ilk turda emin olduğunuz soruları çözmek size büyük zaman kazandıracaktır.
     `

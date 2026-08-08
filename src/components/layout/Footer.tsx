@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MessageCircle, MapPin, Phone, Instagram, Facebook, TramFront } from "lucide-react";
 import { SITE_CONFIG, NAV_LINKS, SERVICES } from "../../lib/constants";
 import BoyutLogo from "../ui/BoyutLogo";
 import styles from "./Footer.module.css";
@@ -26,7 +27,7 @@ export default function Footer() {
                 className={styles.socialBtn}
                 aria-label="Instagram"
               >
-                📸
+                <Instagram size={20} />
               </a>
               <a
                 href={SITE_CONFIG.facebook}
@@ -35,7 +36,7 @@ export default function Footer() {
                 className={styles.socialBtn}
                 aria-label="Facebook"
               >
-                👍
+                <Facebook size={20} />
               </a>
               <a
                 href={SITE_CONFIG.whatsapp}
@@ -44,7 +45,7 @@ export default function Footer() {
                 className={styles.socialBtn}
                 aria-label="WhatsApp"
               >
-                💬
+                <MessageCircle size={20} />
               </a>
             </div>
           </div>
@@ -82,15 +83,15 @@ export default function Footer() {
             <h4 className={styles.linkTitle}>İletişim & Konum</h4>
             <div className={styles.contactItems}>
               <div className={styles.contactItem}>
-                <span className={styles.contactIcon}>📍</span>
+                <span className={styles.contactIcon}><MapPin size={20} /></span>
                 <span>{SITE_CONFIG.address}, Antalya</span>
               </div>
               <div className={styles.contactItem}>
-                <span className={styles.contactIcon}>🚃</span>
+                <span className={styles.contactIcon}><TramFront size={20} /></span>
                 <span>İsmet Paşa Tramvay Durağı Yanı</span>
               </div>
               <div className={styles.contactItem}>
-                <span className={styles.contactIcon}>📞</span>
+                <span className={styles.contactIcon}><Phone size={20} /></span>
                 <a href={`tel:${SITE_CONFIG.phone}`} className={styles.contactLink}>
                   {SITE_CONFIG.phone}
                 </a>
@@ -102,7 +103,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className={styles.whatsappCta}
               >
-                📱 WhatsApp Destek Hattı
+                <MessageCircle size={20} /> WhatsApp Destek Hattı
               </a>
             </div>
           </div>

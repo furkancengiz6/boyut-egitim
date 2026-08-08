@@ -1,9 +1,19 @@
 .footer {
+  background: #030712;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
   position: relative;
-  background: #F8FAFC;
-  border-top: 1px solid #E2E8F0;
-  padding: 60px 0 30px;
   overflow: hidden;
+}
+
+/* Top gradient line */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #1E6FFF 30%, #7C3AED 70%, transparent 100%);
 }
 
 .glow {
@@ -13,60 +23,34 @@
   transform: translateX(-50%);
   width: 600px;
   height: 200px;
-  background: radial-gradient(ellipse at top, rgba(10, 79, 168, 0.05) 0%, transparent 70%);
+  background: radial-gradient(ellipse at top, rgba(30, 111, 255, 0.06) 0%, transparent 70%);
   pointer-events: none;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr;
-  gap: 40px;
-  margin-bottom: 48px;
+  grid-template-columns: 2fr 1fr 1fr 1.2fr;
+  gap: 48px;
+  padding: 64px 0 48px;
 }
 
+/* Brand */
 .brand {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
-.logoGroup {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.logoIcon {
-  width: 44px;
-  height: 44px;
-  background: linear-gradient(135deg, #0A4FA8, #0284C7);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 900;
-  font-size: 1.1rem;
-  color: white;
-  box-shadow: 0 4px 12px rgba(10, 79, 168, 0.2);
-}
-
-.logoBoyut {
-  font-weight: 900;
-  font-size: 1.15rem;
-  color: #0A4FA8;
-  letter-spacing: 0.04em;
-}
-
-.logoSlogan {
-  font-size: 0.72rem;
-  color: #F57C00;
-  font-weight: 700;
+.logoLink {
+  text-decoration: none;
+  display: inline-block;
 }
 
 .brandDesc {
-  color: #475569;
-  font-size: 0.92rem;
-  line-height: 1.6;
+  font-size: 0.88rem;
+  color: #64748B;
+  line-height: 1.7;
+  max-width: 280px;
 }
 
 .socials {
@@ -76,36 +60,38 @@
 }
 
 .socialBtn {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  color: #475569;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
 }
 
 .socialBtn:hover {
-  background: #0A4FA8;
-  color: white;
-  border-color: #0A4FA8;
-  transform: translateY(-2px);
+  background: rgba(30, 111, 255, 0.12);
+  border-color: rgba(30, 111, 255, 0.3);
+  transform: translateY(-3px);
 }
 
+/* Link Groups */
 .linkGroup {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
 .linkTitle {
-  font-size: 1rem;
+  font-size: 0.78rem;
   font-weight: 800;
-  color: #0F172A;
+  color: #94A3B8;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .linkList {
@@ -116,98 +102,116 @@
 }
 
 .footerLink {
-  color: #475569;
   font-size: 0.88rem;
-  transition: all 0.2s ease;
+  color: #64748B;
   text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .footerLink:hover {
-  color: #0A4FA8;
-  padding-left: 4px;
+  color: #93C5FD;
+  transform: translateX(4px);
 }
 
+/* Contact */
 .contactItems {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  font-size: 0.88rem;
-  color: #475569;
+  gap: 12px;
 }
 
 .contactItem {
   display: flex;
   align-items: flex-start;
-  gap: 8px;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: #64748B;
+  line-height: 1.5;
 }
 
 .contactIcon {
-  font-size: 0.95rem;
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 1px;
 }
 
 .contactLink {
-  color: #0F172A;
-  font-weight: 700;
+  color: #64748B;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.2s;
 }
 
 .contactLink:hover {
-  color: #0A4FA8;
+  color: #93C5FD;
 }
 
 .whatsappCta {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 16px;
+  gap: 8px;
+  padding: 12px 16px;
+  margin-top: 6px;
   background: rgba(37, 211, 102, 0.1);
-  border: 1px solid rgba(37, 211, 102, 0.3);
-  color: #128C7E;
+  border: 1px solid rgba(37, 211, 102, 0.25);
+  color: #4ADE80;
   font-weight: 700;
   font-size: 0.85rem;
-  border-radius: 50px;
+  border-radius: 12px;
   text-decoration: none;
-  margin-top: 6px;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .whatsappCta:hover {
-  background: #25D366;
-  color: white;
+  background: rgba(37, 211, 102, 0.18);
+  border-color: rgba(37, 211, 102, 0.4);
+  transform: translateY(-2px);
 }
 
+/* Bottom Bar */
 .bottom {
-  border-top: 1px solid #E2E8F0;
-  padding-top: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
+  padding: 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
   flex-wrap: wrap;
-  gap: 12px;
+}
+
+.bottom p {
   font-size: 0.82rem;
-  color: #64748B;
+  color: #475569;
 }
 
 .mottoHighlight {
-  color: #F57C00;
+  font-size: 0.82rem !important;
   font-weight: 700;
+  background: linear-gradient(135deg, #1E6FFF, #7C3AED);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .grid {
     grid-template-columns: 1fr 1fr;
-    gap: 32px;
+    gap: 40px;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 640px) {
   .grid {
     grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 48px 0 40px;
   }
 
   .bottom {
     flex-direction: column;
     text-align: center;
+    gap: 8px;
   }
 }

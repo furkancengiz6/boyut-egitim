@@ -1,4 +1,5 @@
 import { SITE_CONFIG } from "../../lib/constants";
+import { MapPin, TramFront, Phone } from "lucide-react";
 import styles from "./LocationMap.module.css";
 
 export default function LocationMap() {
@@ -6,20 +7,24 @@ export default function LocationMap() {
     <div className={styles.wrapper}>
       <div className={styles.card}>
         <div className={styles.info}>
-          <span className={styles.badge}>📍 İsmet Paşa Tramvay Durağı Yanı</span>
+          <span className={styles.badge}>
+            <MapPin size={16} /> İsmet Paşa Tramvay Durağı Yanı
+          </span>
           <h3 className={styles.title}>Kolay Ulaşım, Merkezi Lokasyon</h3>
           <p className={styles.address}>
             {SITE_CONFIG.address}, Muratpaşa / {SITE_CONFIG.city}
           </p>
           <div className={styles.transportInfo}>
             <div className={styles.tItem}>
-              <span className={styles.tIcon}>🚃</span>
+              <span className={styles.tIcon}>
+                <TramFront size={20} />
+              </span>
               <div>
                 <strong>Tramvay İle:</strong> İsmet Paşa durağında inin, 1 dakika yürüme mesafesinde.
               </div>
             </div>
             <div className={styles.tItem}>
-              <span className={styles.tIcon}>📞</span>
+              <span className={styles.tIcon}><Phone size={20} /></span>
               <div>
                 <strong>İletişim:</strong> {SITE_CONFIG.phone}
               </div>

@@ -5,6 +5,7 @@ import Navbar from "../../components/layout/Navbar";
 import Footer from "../../components/layout/Footer";
 import WhatsAppButton from "../../components/ui/WhatsAppButton";
 import { SITE_CONFIG } from "../../lib/constants";
+import { Trophy, BarChart, MapPin, MessageCircle, CheckCircle2 } from "lucide-react";
 import styles from "./bursluluk.module.css";
 
 export default function BurslulukPage() {
@@ -104,12 +105,12 @@ export default function BurslulukPage() {
                   </div>
 
                   <button type="submit" className="btn-whatsapp" style={{ justifyContent: "center" }}>
-                    📱 WhatsApp İle Sınav Kaydını Tamamla
+                    <MessageCircle size={18} /> WhatsApp İle Sınav Kaydını Tamamla
                   </button>
                 </form>
               ) : (
                 <div className={styles.successBox}>
-                  <div className={styles.successIcon}>🎉</div>
+                  <div className={styles.successIcon}><CheckCircle2 size={48} color="#34A853" /></div>
                   <h3>Başvurunuz Alındı!</h3>
                   <p>Sizi WhatsApp hattımıza yönlendirdik. Sınav giriş belgeniz iletilecektir.</p>
                 </div>
@@ -121,7 +122,7 @@ export default function BurslulukPage() {
               <h2>Bursluluk Sınavı Hakkında</h2>
               <div className={styles.infoList}>
                 <div className={styles.infoItem}>
-                  <span className={styles.infoIcon}>🏆</span>
+                  <span className={styles.infoIcon}><Trophy size={24} color="#F57C00" /></span>
                   <div>
                     <h4>%100&apos;e Varan Başarı Bursu</h4>
                     <p>Dereceye giren öğrencilere eğitim dönemi boyunca özel burs oranları sağlanır.</p>
@@ -129,7 +130,7 @@ export default function BurslulukPage() {
                 </div>
 
                 <div className={styles.infoItem}>
-                  <span className={styles.infoIcon}>📊</span>
+                  <span className={styles.infoIcon}><BarChart size={24} color="#1E6FFF" /></span>
                   <div>
                     <h4>MADLEN AI Performans Raporu</h4>
                     <p>Sınava giren tüm öğrencilere ücretsiz eksik analizi ve çalışma karnesi verilir.</p>
@@ -137,7 +138,7 @@ export default function BurslulukPage() {
                 </div>
 
                 <div className={styles.infoItem}>
-                  <span className={styles.infoIcon}>📍</span>
+                  <span className={styles.infoIcon}><MapPin size={24} color="#FF416C" /></span>
                   <div>
                     <h4>Sınav Merkezi</h4>
                     <p>{SITE_CONFIG.name} — {SITE_CONFIG.address}, Antalya</p>

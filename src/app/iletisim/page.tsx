@@ -3,6 +3,7 @@ import Footer from "../../components/layout/Footer";
 import WhatsAppButton from "../../components/ui/WhatsAppButton";
 import LocationMap from "../../components/location/LocationMap";
 import { SITE_CONFIG } from "../../lib/constants";
+import { MessageCircle, MapPin } from "lucide-react";
 import styles from "./iletisim.module.css";
 
 export const metadata = {
@@ -37,21 +38,21 @@ export default function IletisimPage() {
                 rel="noopener noreferrer"
                 className={`${styles.card} ${styles.whatsappCard}`}
               >
-                <div className={styles.cardIcon}>💬</div>
+                <div className={styles.cardIcon}><MessageCircle size={32} /></div>
                 <h3>WhatsApp Destek Hattı</h3>
                 <p>En hızlı iletişim yöntemi. Sorularını sor, anında yanıt al.</p>
                 <span className={styles.cardBtn}>WhatsApp ile Mesaj Gönder →</span>
               </a>
 
               <a href={`tel:${SITE_CONFIG.phone}`} className={styles.card}>
-                <div className={styles.cardIcon}>📞</div>
+                <div className={styles.cardIcon}><Phone size={32} /></div>
                 <h3>Telefon İletişim</h3>
                 <p>GSM: {SITE_CONFIG.phone}</p>
                 <span className={styles.cardBtn}>Hemen Ara →</span>
               </a>
 
-              <div className={styles.card}>
-                <div className={styles.cardIcon}>📍</div>
+              <div className={styles.infoCard}>
+                <div className={styles.cardIcon}><MapPin size={32} color="#0284C7" /></div>
                 <h3>Adres Bilgisi</h3>
                 <p>{SITE_CONFIG.address}</p>
                 <span className={styles.addressMeta}>Gaziantep</span>

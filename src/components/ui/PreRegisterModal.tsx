@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { MessageCircle, CheckCircle2 } from "lucide-react";
 import styles from "./PreRegisterModal.module.css";
 
 interface PreRegisterModalProps {
@@ -101,13 +102,13 @@ export default function PreRegisterModal({
               </div>
 
               <button type="submit" className="btn-whatsapp" style={{ width: "100%", justifyContent: "center" }}>
-                📱 WhatsApp İle Ön Kayıt Talebi Gönder
+                <MessageCircle size={18} /> WhatsApp İle Ön Kayıt Talebi Gönder
               </button>
             </form>
           </>
         ) : (
           <div className={styles.successState}>
-            <div className={styles.successIcon}>🎉</div>
+            <div className={styles.successIcon}><CheckCircle2 size={48} color="#34A853" /></div>
             <h3>Talebiniz Alındı!</h3>
             <p>Sizi WhatsApp hattımıza yönlendiriyoruz. Danışmanımız en kısa sürede sizinle iletişime geçecektir.</p>
           </div>
