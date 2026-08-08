@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, MessageCircle } from "lucide-react";
+import { Menu, X, MessageCircle, Phone } from "lucide-react";
 import { NAV_LINKS, SITE_CONFIG } from "../../lib/constants";
 import BoyutLogo from "../ui/BoyutLogo";
 import InfinityIcon from "../ui/InfinityIcon";
@@ -57,7 +57,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className={styles.whatsappBtn}
             >
-              <InfinityIcon width={20} height={14} />
+              <Phone size={16} style={{ marginRight: '6px' }} />
               WhatsApp Bilgi
             </a>
 
