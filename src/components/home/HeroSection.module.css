@@ -5,7 +5,9 @@
   align-items: center;
   justify-content: center;
   padding: 140px 0 100px;
-  background: #05091A;
+  background: 
+    linear-gradient(180deg, rgba(5, 9, 26, 0.75) 0%, rgba(5, 9, 26, 0.95) 100%),
+    url('/assets/boyut-binasi.jpg') center/cover no-repeat;
   overflow: hidden;
 }
 
@@ -93,6 +95,7 @@
   font-weight: 700;
   color: #93C5FD;
   margin-bottom: 28px;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   letter-spacing: 0.02em;
 }
@@ -171,8 +174,8 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 28px;
   padding: 36px;
-  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(30, 111, 255, 0.1);
   position: relative;
   overflow: hidden;
@@ -314,7 +317,7 @@
 @media (max-width: 600px) {
   .hero {
     padding: 120px 0 80px;
-    min-height: auto;
+    min-height: unset;
   }
 }
 

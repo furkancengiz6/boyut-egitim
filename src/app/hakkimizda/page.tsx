@@ -3,6 +3,7 @@ import Footer from "../../components/layout/Footer";
 import WhatsAppButton from "../../components/ui/WhatsAppButton";
 import { SITE_CONFIG } from "../../lib/constants";
 import { Target, Rocket, Lightbulb, MessageCircle } from "lucide-react";
+import ClassroomGallery from "../../components/home/ClassroomGallery";
 import styles from "./hakkimizda.module.css";
 
 export const metadata = {
@@ -60,7 +61,11 @@ export default function HakkimizdaPage() {
               </div>
             </div>
           </div>
+        </div>
 
+        <ClassroomGallery />
+
+        <div className="container">
           <div className={styles.ctaBanner}>
             <h3>Siz de Boyut Eğitim Ailesine Katılın</h3>
             <p>Lokasyon: {SITE_CONFIG.address}</p>

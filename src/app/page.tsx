@@ -6,6 +6,7 @@ import MadlenBanner from "../components/home/MadlenBanner";
 import BurslulukBanner from "../components/home/BurslulukBanner";
 import YaziliHazirlikBanner from "../components/home/YaziliHazirlikBanner";
 import ServicesGrid from "../components/home/ServicesGrid";
+import ClassroomGallery from "../components/home/ClassroomGallery";
 import DenemeKulubu from "../components/home/DenemeKulubu";
 import GoogleReviews from "../components/home/GoogleReviews";
 import NetSimulator from "../components/home/NetSimulator";
@@ -24,6 +25,7 @@ export default function Home() {
       <BurslulukBanner />
       <MadlenBanner />
       <ServicesGrid />
+      <ClassroomGallery />
       <DenemeKulubu />
       <YaziliHazirlikBanner />
       <GoogleReviews />

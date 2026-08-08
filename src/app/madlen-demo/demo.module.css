@@ -33,6 +33,7 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   padding: 28px;
+  -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
 }
 
@@ -116,6 +117,7 @@
   border: 1px solid rgba(30, 143, 213, 0.4);
   border-radius: 24px;
   padding: 40px;
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   display: flex;
