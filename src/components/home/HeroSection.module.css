@@ -1,42 +1,18 @@
 .hero {
   position: relative;
-  min-height: 90vh;
+  min-height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 140px 0 80px;
-  background: var(--gradient-hero);
+  padding: 130px 0 70px;
+  background: #FFFFFF;
   overflow: hidden;
-  border-bottom: 1px solid var(--glass-border);
-}
-
-.glow1, .glow2 {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(120px);
-  pointer-events: none;
-  opacity: 0.5;
-}
-
-.glow1 {
-  top: -100px;
-  left: -100px;
-  width: 500px;
-  height: 500px;
-  background: rgba(10, 79, 168, 0.1);
-}
-
-.glow2 {
-  bottom: -100px;
-  right: -100px;
-  width: 500px;
-  height: 500px;
-  background: rgba(245, 124, 0, 0.08);
+  border-bottom: 1px solid #E2E8F0;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1.15fr 0.85fr;
   gap: 48px;
   align-items: center;
 }
@@ -53,7 +29,7 @@
   gap: 8px;
   padding: 6px 16px;
   background: rgba(10, 79, 168, 0.08);
-  border: 1px solid rgba(10, 79, 168, 0.2);
+  border: 1px solid rgba(10, 79, 168, 0.18);
   border-radius: 50px;
   font-size: 0.85rem;
   font-weight: 700;
@@ -62,7 +38,7 @@
 }
 
 .title {
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-size: clamp(2.2rem, 4.8vw, 3.8rem);
   font-weight: 900;
   color: #0F172A;
   line-height: 1.15;
@@ -102,66 +78,76 @@
 
 .checkIcon {
   color: #16A34A;
+  font-weight: 900;
 }
 
-/* Tree Growth Card */
+/* Institutional Highlights Card */
 .visualWrapper {
   position: relative;
 }
 
-.treeCard {
+.instCard {
   background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 28px;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 24px;
   padding: 32px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.treeHeader {
-  text-align: center;
-  margin-bottom: 24px;
+.instHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
-.treeHeader h3 {
-  font-size: 1.15rem;
+.instBadge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--boyut-orange);
+  letter-spacing: 0.08em;
+}
+
+.instHeader h3 {
+  font-size: 1.3rem;
   font-weight: 800;
   color: #0F172A;
 }
 
-.treeHeader p {
-  font-size: 0.82rem;
-  color: #64748B;
-}
-
-.treeGrid {
+.instList {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
-.treeStage {
+.instItem {
   display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 16px;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px;
   background: #F8FAFC;
   border: 1px solid #E2E8F0;
-  border-radius: 16px;
+  border-radius: 14px;
 }
 
-.stageIcon {
-  font-size: 2rem;
+.instIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
 }
 
-.stageTitle {
+.instItem h4 {
   font-size: 0.95rem;
   font-weight: 800;
   color: #0F172A;
+  margin-bottom: 2px;
 }
 
-.stageDesc {
-  font-size: 0.78rem;
+.instItem p {
+  font-size: 0.82rem;
   color: #64748B;
+  line-height: 1.4;
 }
 
 @media (max-width: 900px) {

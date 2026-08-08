@@ -18,16 +18,16 @@ export default function HeroSection() {
           {/* Main Copy */}
           <div className={styles.content}>
             <div className={styles.badge}>
-              <span>✨ Antalya Muratpaşa — İsmet Paşa Tramvay Durağı Yanı</span>
+              <span>📍 Antalya Muratpaşa — İsmet Paşa Tramvay Durağı Yanı</span>
             </div>
 
             <h1 className={styles.title}>
-              Kalabalık Sınıflarda Kaybolma,{" "}
+              Kalabalıkta Kaybolma,{" "}
               <span className="gradient-text-orange">Zirveye Ulaş!</span>
             </h1>
 
             <p className={styles.subtitle}>
-              Boyut Eğitim Kurumları; 16+ seçkin yayınevi deneme kulübü, Türkiye Yüzyılı Maarif Modeli uyumlu MADLEN yapay zeka takip altyapısı ve uzman kadrosu ile başarıyı garanti eder.
+              Boyut Eğitim Kurumları; 16+ seçkin yayınevi deneme kulübü, birebir rehberlik ve kişiye özel gelişim takibi ile öğrencilerini Türkiye derecesine hazırlar.
             </p>
 
             <div className={styles.actions}>
@@ -45,10 +45,10 @@ export default function HeroSection() {
 
             <div className={styles.features}>
               <div className={styles.featureItem}>
-                <span className={styles.checkIcon}>✓</span> %98 Öğrenci Memnuniyeti
+                <span className={styles.checkIcon}>✓</span> %98 Memnuniyet Oranı
               </div>
               <div className={styles.featureItem}>
-                <span className={styles.checkIcon}>✓</span> 16+ Yayın Deneme Kulübü
+                <span className={styles.checkIcon}>✓</span> 16+ Seçkin Yayınevi
               </div>
               <div className={styles.featureItem}>
                 <span className={styles.checkIcon}>✓</span> Birebir Veli & Öğrenci Takibi
@@ -56,36 +56,36 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Educational Tree Growth Graphic */}
+          {/* Institutional Highlights Card */}
           <div className={styles.visualWrapper}>
-            <div className={styles.treeCard}>
-              <div className={styles.treeHeader}>
-                <h3>Boyut Eğitim Gelişim Formülü</h3>
-                <p>Başarıya Giden 3 Temel Aşama</p>
+            <div className={styles.instCard}>
+              <div className={styles.instHeader}>
+                <span className={styles.instBadge}>BOYUT EĞİTİM FARKI</span>
+                <h3>Neden Boyut Eğitim?</h3>
               </div>
 
-              <div className={styles.treeGrid}>
-                <div className={styles.treeStage}>
-                  <span className={styles.stageIcon}>🌱</span>
+              <div className={styles.instList}>
+                <div className={styles.instItem}>
+                  <span className={styles.instIcon}>📋</span>
                   <div>
-                    <div className={styles.stageTitle}>1. ZEKA</div>
-                    <div className={styles.stageDesc}>Potansiyelini keşfet ve yönlendir.</div>
+                    <h4>16+ Yayınevi Deneme Kulübü</h4>
+                    <p>Özdebir, Töder, 3D, Bilgi Sarmal ve daha fazlası ile gerçek YKS provası.</p>
                   </div>
                 </div>
 
-                <div className={styles.treeStage}>
-                  <span className={styles.stageIcon}>🌿</span>
+                <div className={styles.instItem}>
+                  <span className={styles.instIcon}>📊</span>
                   <div>
-                    <div className={styles.stageTitle}>2. ZEKA + ÇABA</div>
-                    <div className={styles.stageDesc}>Düzenli ders ve etüt çalışması.</div>
+                    <h4>MADLEN Akıllı Eksik Takibi</h4>
+                    <p>Girdiğin tüm denemelerin soru bazlı analizi ve kişisel gelişim karnesi.</p>
                   </div>
                 </div>
 
-                <div className={styles.treeStage} style={{ border: "2px solid #F57C00", background: "rgba(245, 124, 0, 0.05)" }}>
-                  <span className={styles.stageIcon}>🌳</span>
+                <div className={styles.instItem}>
+                  <span className={styles.instIcon}>👨‍👩‍👧</span>
                   <div>
-                    <div className={styles.stageTitle} style={{ color: "#F57C00" }}>3. ZEKA + ÇABA + DİSİPLİN</div>
-                    <div className={styles.stageDesc}>Boyut Eğitim ile Türkiye Derecesi!</div>
+                    <h4>Düzenli Veli Bilgilendirmesi</h4>
+                    <p>Aileniz sürecin her adımını şeffaf takip eder, başarı birlikte inşa edilir.</p>
                   </div>
                 </div>
               </div>
