@@ -3,7 +3,7 @@ import Footer from "../../components/layout/Footer";
 import WhatsAppButton from "../../components/ui/WhatsAppButton";
 import LocationMap from "../../components/location/LocationMap";
 import { SITE_CONFIG } from "../../lib/constants";
-import { MessageCircle, MapPin } from "lucide-react";
+import { MessageCircle, MapPin, Phone } from "lucide-react";
 import styles from "./iletisim.module.css";
 
 export const metadata = {
