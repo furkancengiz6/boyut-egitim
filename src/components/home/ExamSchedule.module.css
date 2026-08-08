@@ -1,0 +1,94 @@
+.scheduleCard {
+  background: rgba(13, 21, 38, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 32px;
+  backdrop-filter: blur(16px);
+  margin-top: 40px;
+}
+
+.scheduleHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.scheduleTitle {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.scheduleSub {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.badgeCount {
+  background: rgba(30, 143, 213, 0.15);
+  border: 1px solid rgba(30, 143, 213, 0.3);
+  color: var(--boyut-sky);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 20px;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th {
+  padding: 12px 16px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.table td {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  font-size: 0.92rem;
+}
+
+.dateTd {
+  font-weight: 700;
+  color: var(--boyut-orange);
+  white-space: nowrap;
+}
+
+.nameTd {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.pubBadge {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-secondary);
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+}
+
+.statusBadge {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.statusOpen {
+  color: #27C93F;
+  font-weight: 700;
+}

@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ============================================
+   DESIGN TOKENS — BOYUT EĞİTİM
+   ============================================ */
+:root {
+  /* Brand Colors */
+  --boyut-blue: #0A4FA8;
+  --boyut-blue-mid: #1565C0;
+  --boyut-light-blue: #1E8FD5;
+  --boyut-sky: #42A5F5;
+  --boyut-orange: #F57C00;
+  --boyut-orange-light: #FF9800;
+  --boyut-gold: #FFB300;
+  --boyut-amber: #FFCA28;
+
+  /* Dark Palette */
+  --bg-primary: #070C18;
+  --bg-secondary: #0D1526;
+  --bg-card: #0F1A2E;
+  --bg-card-hover: #142236;
+
+  /* Glass */
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-hover: rgba(255, 255, 255, 0.08);
+
+  /* Text */
+  --text-primary: #F0F4FF;
+  --text-secondary: #9AB0CC;
+  --text-muted: #5A7A9A;
+
+  /* Gradients */
+  --gradient-brand: linear-gradient(135deg, var(--boyut-blue) 0%, var(--boyut-light-blue) 100%);
+  --gradient-orange: linear-gradient(135deg, var(--boyut-orange) 0%, var(--boyut-gold) 100%);
+  --gradient-hero: linear-gradient(135deg, #070C18 0%, #0D1A35 50%, #0A1F40 100%);
+  --gradient-glow-blue: radial-gradient(ellipse at center, rgba(30, 143, 213, 0.15) 0%, transparent 70%);
+  --gradient-glow-orange: radial-gradient(ellipse at center, rgba(245, 124, 0, 0.12) 0%, transparent 70%);
+
+  /* Shadows */
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-glow-blue: 0 0 40px rgba(30, 143, 213, 0.3);
+  --shadow-glow-orange: 0 0 40px rgba(245, 124, 0, 0.3);
+  --shadow-btn: 0 8px 32px rgba(30, 143, 213, 0.4);
+
+  /* Spacing */
+  --section-padding: 100px 0;
+  --container-max: 1280px;
+  --border-radius: 16px;
+  --border-radius-sm: 8px;
+  --border-radius-lg: 24px;
+  --border-radius-xl: 32px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: var(--section-padding);
+}
+
+.section-sm {
+  padding: 60px 0;
+}
+
+/* Gradient Text */
+.gradient-text-blue {
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-orange {
+  background: var(--gradient-orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass Card */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius);
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: var(--gradient-brand);
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  box-shadow: var(--shadow-btn);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 100%);
+  opacity: 0;
+  transition: var(--transition-fast);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(30, 143, 213, 0.5);
+}
+
+.btn-primary:hover::before {
+  opacity: 1;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: transparent;
+  color: var(--text-primary);
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 1px solid var(--glass-border);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background: var(--glass-hover);
+  border-color: var(--boyut-light-blue);
+  transform: translateY(-3px);
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+  text-decoration: none;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(37, 211, 102, 0.5);
+}
+
+/* Section Headers */
+.section-tag {
+  display: inline-block;
+  padding: 6px 18px;
+  background: rgba(30, 143, 213, 0.12);
+  border: 1px solid rgba(30, 143, 213, 0.3);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--boyut-sky);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+/* ============================================
+   RESPONSIVE HELPERS
+   ============================================ */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 65px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .btn-primary, .btn-secondary, .btn-whatsapp {
+    padding: 12px 24px;
+    font-size: 0.92rem;
+    width: 100%;
+    justify-content: center;
+  }
+}

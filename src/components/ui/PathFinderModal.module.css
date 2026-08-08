@@ -1,0 +1,105 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 8, 16, 0.85);
+  backdrop-filter: blur(12px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal {
+  background: #0D1526;
+  border: 1px solid rgba(30, 143, 213, 0.3);
+  border-radius: 24px;
+  padding: 36px;
+  max-width: 480px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.stepTag {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--boyut-orange);
+  background: rgba(245, 124, 0, 0.1);
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(245, 124, 0, 0.3);
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.stepContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stepContent h4 {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.optBtn {
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  color: var(--text-primary);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.optBtn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.selected {
+  background: rgba(30, 143, 213, 0.15);
+  border-color: var(--boyut-light-blue);
+  color: var(--boyut-sky);
+}
+
+.btnRow {
+  display: flex;
+  gap: 12px;
+}

@@ -1,0 +1,213 @@
+.footer {
+  position: relative;
+  background: var(--bg-secondary);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 80px 0 40px;
+  overflow: hidden;
+}
+
+.glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 200px;
+  background: radial-gradient(ellipse at top, rgba(30, 143, 213, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 48px;
+  margin-bottom: 60px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.logoGroup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoIcon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--boyut-blue), var(--boyut-light-blue));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: white;
+  box-shadow: 0 4px 16px rgba(30, 143, 213, 0.3);
+}
+
+.logoBoyut {
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+}
+
+.logoSlogan {
+  font-size: 0.75rem;
+  color: var(--boyut-orange);
+  font-weight: 600;
+}
+
+.brandDesc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.socialBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.socialBtn:hover {
+  background: var(--boyut-blue);
+  color: white;
+  border-color: var(--boyut-light-blue);
+  transform: translateY(-3px);
+}
+
+.linkGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.linkTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footerLink {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.footerLink:hover {
+  color: var(--boyut-sky);
+  padding-left: 4px;
+}
+
+.contactItems {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.contactIcon {
+  font-size: 1rem;
+}
+
+.contactLink {
+  color: var(--text-primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contactLink:hover {
+  color: var(--boyut-sky);
+}
+
+.whatsappCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.2), rgba(18, 140, 126, 0.2));
+  border: 1px solid rgba(37, 211, 102, 0.4);
+  color: #25D366;
+  font-weight: 600;
+  font-size: 0.88rem;
+  border-radius: 50px;
+  text-decoration: none;
+  margin-top: 8px;
+  transition: all 0.3s ease;
+}
+
+.whatsappCta:hover {
+  background: #25D366;
+  color: white;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+}
+
+.bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.mottoHighlight {
+  color: var(--boyut-orange);
+  font-weight: 700;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 576px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}

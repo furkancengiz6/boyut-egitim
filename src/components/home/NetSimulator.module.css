@@ -1,0 +1,187 @@
+.header {
+  text-align: center;
+  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.simulatorCard {
+  background: rgba(13, 21, 38, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 40px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+}
+
+.fieldSelector {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.fieldBtn {
+  padding: 10px 24px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-secondary);
+  border-radius: 50px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.fieldBtn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+}
+
+.fieldActive {
+  background: linear-gradient(135deg, var(--boyut-blue), var(--boyut-light-blue));
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 16px rgba(30, 143, 213, 0.4);
+}
+
+.slidersGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  margin-bottom: 40px;
+}
+
+.sliderBox {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 24px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sliderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sliderLabel {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.sliderValue {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--boyut-orange);
+  background: rgba(245, 124, 0, 0.1);
+  padding: 4px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(245, 124, 0, 0.2);
+}
+
+.rangeInput {
+  width: 100%;
+  accent-color: var(--boyut-orange);
+  cursor: pointer;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.rangeMeta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.resultBox {
+  background: linear-gradient(135deg, rgba(30, 143, 213, 0.1) 0%, rgba(245, 124, 0, 0.1) 100%);
+  border: 1px solid rgba(30, 143, 213, 0.3);
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.scoreDisplay {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.scoreSub {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.scoreBig {
+  font-size: 2.8rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #1E8FD5, #FFB300);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.scoreUnit {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.tierInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tierBadge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid;
+}
+
+.tierTitle {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.tierDesc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 900px) {
+  .slidersGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .resultBox {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tierBadge {
+    align-self: center;
+  }
+}

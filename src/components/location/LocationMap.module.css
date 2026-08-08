@@ -1,0 +1,104 @@
+.container {
+  margin-top: 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.badge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--boyut-sky);
+  background: rgba(30, 143, 213, 0.15);
+  border: 1px solid rgba(30, 143, 213, 0.3);
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.mapCard {
+  background: rgba(13, 21, 38, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 24px;
+  backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mapVisual {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+}
+
+.pulsePin {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--boyut-orange), var(--boyut-gold));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pinIcon {
+  font-size: 1.4rem;
+}
+
+.ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid var(--boyut-orange);
+  animation: pulse-ring 2s infinite;
+}
+
+.locationInfo h4 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.locationInfo p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.tramInfo {
+  font-size: 0.82rem;
+  color: var(--boyut-sky);
+  font-weight: 700;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+@media (max-width: 600px) {
+  .mapVisual {
+    flex-direction: column;
+    text-align: center;
+  }
+}
