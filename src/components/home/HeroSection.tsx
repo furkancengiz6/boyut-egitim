@@ -40,12 +40,12 @@ export default function HeroSection() {
               öğrencilerini Türkiye derecesine hazırlar.
             </p>
 
-            <div className={styles.ctaGroup}>
-              <Link href="/bursluluk-sinavi" className={styles.primaryBtn}>
+            <div className={styles.actions}>
+              <Link href="/bursluluk-sinavi" className="btn-primary">
                 <GraduationCap size={20} /> Bursluluk Sınavına Başvur →
               </Link>
               <button
-                className={styles.secondaryBtn}
+                className="btn-secondary"
                 onClick={() => setIsModalOpen(true)}
               >
                 <Target size={20} /> 30 Saniyede Özel YKS Rotan
