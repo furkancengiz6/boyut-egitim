@@ -2,6 +2,7 @@ import React from "react";
 import InfinityIcon from "./InfinityIcon";
 
 interface BoyutLogoProps {
+  width?: number;
   height?: number;
   showText?: boolean;
 }

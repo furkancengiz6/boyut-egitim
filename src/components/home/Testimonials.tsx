@@ -24,9 +24,9 @@ export default function Testimonials() {
                 <div className={styles.avatar}>{item.avatar}</div>
                 <div>
                   <h3 className={styles.name}>{item.name}</h3>
-                  <div className={styles.grade}>{item.grade}</div>
+                  <div className={styles.grade}>{item.role}</div>
                 </div>
-                <div className={styles.scoreBadge}>{item.score}</div>
+                <div className={styles.scoreBadge}>{item.relativeTime}</div>
               </div>
               <p className={styles.text}>&ldquo;{item.text}&rdquo;</p>
               <div className={styles.stars}>★★★★★</div>
