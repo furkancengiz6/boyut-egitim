@@ -7,13 +7,22 @@
   background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
 }
 
+.waveSvg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
 .lightOrb1 {
   position: absolute;
   top: -10%;
   left: 20%;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(10, 79, 168, 0.05) 0%, transparent 70%);
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(10, 79, 168, 0.08) 0%, transparent 70%);
   border-radius: 50%;
   filter: blur(50px);
 }
@@ -24,7 +33,7 @@
   right: 15%;
   width: 450px;
   height: 450px;
-  background: radial-gradient(circle, rgba(245, 124, 0, 0.04) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(245, 124, 0, 0.07) 0%, transparent 70%);
   border-radius: 50%;
   filter: blur(50px);
 }

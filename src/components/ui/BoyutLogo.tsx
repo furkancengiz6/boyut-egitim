@@ -6,15 +6,15 @@ interface BoyutLogoProps {
   showText?: boolean;
 }
 
-export default function BoyutLogo({ height = 36, showText = true }: BoyutLogoProps) {
+export default function BoyutLogo({ height = 44, showText = true }: BoyutLogoProps) {
   return (
     <div style={{ display: "inline-flex", alignItems: "center", gap: "12px" }}>
-      <div style={{ position: "relative", height: `${height}px`, width: `${Math.round(height * 1.2)}px`, flexShrink: 0 }}>
+      <div style={{ position: "relative", height: `${height}px`, width: `${Math.round(height * 1.5)}px`, flexShrink: 0 }}>
         <Image
-          src="/assets/boyut-logo.png"
-          alt="Boyut Eğitim Kurumları"
+          src="/assets/boyut-infinity-logo.png"
+          alt="Boyut Eğitim Kurumları Logo"
           fill
-          sizes="100px"
+          sizes="120px"
           style={{ objectFit: "contain" }}
           priority
         />
@@ -25,10 +25,10 @@ export default function BoyutLogo({ height = 36, showText = true }: BoyutLogoPro
           <span
             style={{
               fontFamily: "'Outfit', sans-serif",
-              fontSize: "1.25rem",
+              fontSize: "1.3rem",
               fontWeight: 900,
               color: "#0A4FA8",
-              letterSpacing: "0.03em",
+              letterSpacing: "0.04em",
             }}
           >
             BOYUT
@@ -36,7 +36,7 @@ export default function BoyutLogo({ height = 36, showText = true }: BoyutLogoPro
           <span
             style={{
               fontFamily: "'Outfit', sans-serif",
-              fontSize: "0.62rem",
+              fontSize: "0.64rem",
               fontWeight: 800,
               color: "#F57C00",
               letterSpacing: "0.18em",

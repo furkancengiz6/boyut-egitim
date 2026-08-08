@@ -6,66 +6,46 @@ import styles from "./DenemeKulubu.module.css";
 
 export default function DenemeKulubu() {
   return (
-    <section className="section" style={{ position: "relative", overflow: "hidden" }}>
-      <div className={styles.glow} />
-
+    <section className="section" style={{ background: "var(--bg-secondary)" }}>
       <div className="container">
         <div className={styles.header}>
-          <span className="section-tag">Sınav Provasında Zirve</span>
+          <span className="section-tag">16+ Seçkin Yayınevi</span>
           <h2 className="section-title">
-            Boyut <span className="gradient-text-orange">DENEME KULÜBÜ</span> Kayıtları Başladı!
+            Türkiye Geneli <span className="gradient-text-blue">Deneme Kulübü</span>
           </h2>
           <p className="section-subtitle">
-            Türkiye&apos;nin en güçlü yayınevlerinin sınavları ile gerçek sınav deneyimi yaşa. Sıfır Hatalar kitapçıkları ve kişiye özel analiz ile eksiklerini tamamla.
+            Özdebir, Töder, 3D, Bilgi Sarmal ve Türkiye&apos;nin en kaliteli yayınevlerinin resmi sınavlarına Boyut Eğitim güvencesiyle katılın.
           </p>
         </div>
 
-        <div className={styles.pillsGrid}>
-          <div className={styles.pill}>
-            <span className={styles.pillIcon}>🎯</span>
-            <div>
-              <strong>En Güçlü Yayınlar</strong>
-              <span>16+ Seçkin Yayınevi</span>
+        {/* Multi-column grid layout */}
+        <div className={styles.publisherGrid}>
+          {PUBLISHERS.map((pub, idx) => (
+            <div key={idx} className={styles.pubCard}>
+              <span className={styles.checkBadge}>✓</span>
+              <span className={styles.pubName}>{pub}</span>
             </div>
-          </div>
-
-          <div className={styles.pill}>
-            <span className={styles.pillIcon}>📊</span>
-            <div>
-              <strong>En Doğru Analiz</strong>
-              <span>MADLEN AI Değerlendirmesi</span>
-            </div>
-          </div>
-
-          <div className={styles.pill}>
-            <span className={styles.pillIcon}>🏆</span>
-            <div>
-              <strong>En Yüksek Başarı</strong>
-              <span>Net Artış Garantisi</span>
-            </div>
-          </div>
+          ))}
         </div>
 
-        <div className={styles.publishersContainer}>
-          <h3 className={styles.pubTitle}>Anlaşmalı Seçkin Yayınevlerimiz</h3>
-          <div className={styles.pubGrid}>
-            {PUBLISHERS.map((pub, idx) => (
-              <div key={idx} className={styles.pubCard}>
-                <span className={styles.pubCheck}>✓</span>
-                <span className={styles.pubName}>{pub}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className={styles.ctaCard}>
-          <div className={styles.ctaText}>
-            <h3>10. ve 11. Sınıf Öğrencilerimize Erken Kayıt Avantajı!</h3>
+        <div className={styles.bannerCard}>
+          <div className={styles.bannerText}>
+            <h3>10, 11 ve 12. Sınıf Öğrencilerimize Erken Kayıt Avantajı!</h3>
             <p>Sınırlı kontenjandan yararlanmak ve deneme kulübüne özel fiyat almak için hemen iletişime geçin.</p>
           </div>
-          <Link href="/deneme-kulubu" className="btn-primary">
-            Deneme Kulübüne Kaydol →
-          </Link>
+          <div className={styles.btnGroup}>
+            <Link href="/deneme-kulubu" className="btn-primary">
+              📋 Deneme Kulübü Sınav Takvimi →
+            </Link>
+            <a
+              href="https://wa.me/905060272741?text=Merhaba%20Boyut%20E%C4%9Fitim%2C%20Deneme%20Kul%C3%BCb%C3%BC%20ve%20yayn%20takvimi%20hakknda%20bilgi%20almak%20istiyorum."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-whatsapp"
+            >
+              📱 WhatsApp İle Bilgi Al
+            </a>
+          </div>
         </div>
       </div>
     </section>
